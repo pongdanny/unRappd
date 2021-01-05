@@ -11,7 +11,7 @@ def artists():
     artists = db.session.query(Artist).options(selectinload(Artist.user)).all()
 
     artists_with_seller = [{**artist.to_dict(), "user": artist.user.to_dict()}
-                         for artist in artists]
+                        for artist in artists]
 
     return jsonify(artists_with_user)
 
