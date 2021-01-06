@@ -12,8 +12,8 @@ class Checkin(db.Model):
     rating = db.Column(db.Integer)
 
     user = db.relationship("User", back_populates="checkins")
-    artist = db.relationship("Artist", back_populates="checkins")
-    song = db.relationship("Song", back_populates="checkins")
+    artists = db.relationship("Artist", back_populates="checkins")
+    songs = db.relationship("Song", back_populates="checkins")
 
 
 def to_dict(self):

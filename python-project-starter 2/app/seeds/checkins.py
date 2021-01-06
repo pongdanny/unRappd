@@ -1,4 +1,4 @@
-from app.models import db, checkin
+from app.models import db, Checkin
 
 
 def seed_checkins():
@@ -10,16 +10,15 @@ def seed_checkins():
     checkin5 = Checkin(userId="5", songId="6", artistId="3", review="BRO THIS GUY GOT BARS!!!", rating="5")
     checkin6 = Checkin(userId="6", songId="16", artistId="8", review="my new fav song right hurr!", rating="5")
 
+    db.session.add(checkin1)
+    db.session.add(checkin2)
+    db.session.add(checkin3)
+    db.session.add(checkin4)
+    db.session.add(checkin5)
+    db.session.add(checkin6)
+    db.session.commit()
 
-db.session.add(checkin1)
-db.session.add(checkin2)
-db.session.add(checkin3)
-db.session.add(checkin4)
-db.session.add(checkin5)
-db.session.add(checkin6)
-db.session.commit()
 
-
-def undo_reviews():
+def undo_checkins():
     db.session.execute('TRUNCATE TABLE checkins RESTART IDENTITY CASCADE;')
     db.session.commit()

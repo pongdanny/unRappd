@@ -1,4 +1,4 @@
-from app.models import song, db
+from app.models import Song, db
 
 
 def seed_songs():
@@ -24,30 +24,30 @@ def seed_songs():
     song19 = Song(artistId=10, songName="Water", albumName="Sleepy For President")
     song20 = Song(artistId=10, songName="Somebody", albumName="THe Black House")
 
-    db.session.add(demo1)
-    db.session.add(demo2)
-    db.session.add(demo3)
-    db.session.add(demo4)
-    db.session.add(demo5)
-    db.session.add(demo6)
-    db.session.add(demo7)
-    db.session.add(demo8)
-    db.session.add(demo9)
-    db.session.add(demo10)
-    db.session.add(demo11)
-    db.session.add(demo12)
-    db.session.add(demo13)
-    db.session.add(demo14)
-    db.session.add(demo15)
-    db.session.add(demo16)
-    db.session.add(demo17)
-    db.session.add(demo18)
-    db.session.add(demo19)
-    db.session.add(demo20)
+    db.session.add(song1)
+    db.session.add(song2)
+    db.session.add(song3)
+    db.session.add(song4)
+    db.session.add(song5)
+    db.session.add(song6)
+    db.session.add(song7)
+    db.session.add(song8)
+    db.session.add(song9)
+    db.session.add(song10)
+    db.session.add(song11)
+    db.session.add(song12)
+    db.session.add(song13)
+    db.session.add(song14)
+    db.session.add(song15)
+    db.session.add(song16)
+    db.session.add(song17)
+    db.session.add(song18)
+    db.session.add(song19)
+    db.session.add(song20)
 
     db.session.commit()
 
 
-def undo_users():
+def undo_songs():
     db.session.execute('TRUNCATE TABLE songs RESTART IDENTITY CASCADE;')
     db.session.commit()

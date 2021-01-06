@@ -11,6 +11,7 @@ class Artist(db.Model):
 
     user = db.relationship("User", back_populates="artists")
     songs = db.relationship("Song", back_populates="artists")
+    checkins = db.relationship("Checkin", back_populates="artists")
 
 
 def to_dict(self):
