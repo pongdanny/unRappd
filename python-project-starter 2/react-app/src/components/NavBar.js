@@ -5,7 +5,7 @@ import LoginForm from "./auth/LoginForm";
 import SignUpForm from "./auth/SignUpForm";
 import "./NavBar.css";
 
-const NavBar = ({ setAuthenticated, isAuthenticated, setResults }) => {
+const NavBar = ({ setAuthenticated, authenticated }) => {
   const history = useHistory();
   const [search, setSearch] = useState("");
   const [data, setData] = useState([]);
@@ -38,7 +38,7 @@ const NavBar = ({ setAuthenticated, isAuthenticated, setResults }) => {
     let artistsAndSongsFiltered = [];
     artistsAndSongsFiltered.push(artistFilteredResults);
     artistsAndSongsFiltered.push(songFilteredResults);
-    setResults(artistsAndSongsFiltered);
+    // setResults(artistsAndSongsFiltered);
     setSearch("");
     return history.push("/search");
   };
@@ -68,7 +68,7 @@ const NavBar = ({ setAuthenticated, isAuthenticated, setResults }) => {
             }}
             placeholder="Search for Songs and Artists!"
           ></input>
-          {isAuthenticated ? (
+          {authenticated ? (
             <>
               <div className="user-container">
                 <div className="dropdown">
@@ -86,13 +86,13 @@ const NavBar = ({ setAuthenticated, isAuthenticated, setResults }) => {
             <div className="login-container">
               <li className="nav login">
                 <LoginForm
-                  authenticated={isAuthenticated}
+                  authenticated={authenticated}
                   setAuthenticated={setAuthenticated}
                 />
               </li>
               <li className="nav sign-up">
                 <SignUpForm
-                  authenticated={isAuthenticated}
+                  authenticated={authenticated}
                   setAuthenticated={setAuthenticated}
                 />
               </li>
