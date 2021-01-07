@@ -225,7 +225,7 @@
     border-radius: 5px;
     width: 100%;
     min-width: 150px;
-    max-width: 1000px;
+    max-width: 500px;
     min-height: 45px;
     height: 100%;
     padding-left: 18px;
@@ -350,5 +350,9 @@
   }
 
   .logo {
+  }
+
+  .linkcontainer {
+    display: flex;
   }
 }

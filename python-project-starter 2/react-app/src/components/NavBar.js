@@ -68,12 +68,29 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
             }}
             placeholder="Search for Songs and Artists!"
           ></input>
+          <div className="linkcontainer">
+            <div className="github">
+              <NavLink to="/github" exact={true}>
+                Github
+              </NavLink>
+            </div>
+            <div className="linkedin">
+              <NavLink to="/linkedin" exact={true}>
+                LinkedIn
+              </NavLink>
+            </div>
+            <div className="angellist">
+              <NavLink to="/angellist" exact={true}>
+                AngelList
+              </NavLink>
+            </div>
+          </div>
           {authenticated ? (
             <>
               <div className="user-container">
                 <div className="dropdown">
                   <button className="dropbtn">
-                    <div className="you-button">You</div>
+                    <div className="you-button">Profile</div>
                     <i className=""></i>
                   </button>
                   <div className="dropdown-content">
