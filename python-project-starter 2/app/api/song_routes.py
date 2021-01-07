@@ -1,23 +1,25 @@
 # from flask import Blueprint, jsonify, session, request
-# from app.models import song, db
+# from app.models import artist, db
 # from sqlalchemy.orm import selectinload
 
 
-# song_routes = Blueprint('songs', __name__)
+# artist_routes = Blueprint('artists', __name__)
 
 
-# @song_routes.route("/", methods=["GET"])
-# def song():
-#     songs = db.session.query(Song).options(selectinload(Song.artist)).all()
+# @artist_routes.route("/", methods=["GET"])
+# def artists():
+#     artists = db.session.query(Artist).options(selectinload(Artist.user)).all()
 
-#     songs_with_artist = [{**song.to_dict(), "artist": song.artist.to_dict()}
-#                         for song in songs]
+#     artists_with_seller = [{**artist.to_dict(), "user": artist.user.to_dict()}
+#                         for artist in artists]
 
-#     return jsonify(songs_with_artist)
+#     return jsonify(artists_with_user)
 
 
-# @song_routes.route("/<id>")
-# def song(id):
-#     song = db.session.query(Song).get(id)
+# @artist_routes.route("/<id>")
+# def artist(id):
+#     artist = db.session.query(Artist).get(id)
 
-#     return jsonify(song.to_dict())
+#     return jsonify(artist.to_dict())
+
+

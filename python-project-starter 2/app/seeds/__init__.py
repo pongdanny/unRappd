@@ -14,6 +14,7 @@ def seed():
     seed_users()
     seed_artists()
     seed_songs()
+
     seed_checkins()
     # Add other seed functions here
 
