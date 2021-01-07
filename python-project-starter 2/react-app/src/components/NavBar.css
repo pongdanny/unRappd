@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+
 @media screen and (max-width: 470px) {
   .navbar-container {
     display: flex;
@@ -73,7 +75,7 @@
     color: black;
     border-radius: 10px;
     background-color: inherit;
-    font-family: inherit;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     margin: 0;
     width: 55px;
   }
@@ -264,7 +266,7 @@
     color: black;
     border-radius: 5px;
     background-color: inherit;
-    font-family: inherit;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     margin: 0;
     width: 55px;
   }
@@ -354,5 +356,22 @@
 
   .linkcontainer {
     display: flex;
+    text-decoration: none;
+    color: transparent;
+  }
+
+  .github {
+    background-image: url("https://img.icons8.com/ios-filled/50/000000/github.png");
+    background-size: 100% 100%;
+  }
+
+  .linkedin {
+    background-image: url("https://img.icons8.com/ios-filled/50/000000/linkedin.png");
+    background-size: 100% 100%;
+  }
+
+  .angellist {
+    background-image: url("https://img.icons8.com/ios-filled/50/000000/angelist.png");
+    background-size: 100% 100%;
   }
 }

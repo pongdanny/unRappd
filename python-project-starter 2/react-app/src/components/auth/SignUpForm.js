@@ -11,9 +11,10 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    height: "480px",
-    width: "384px",
-    borderRadius: "20px",
+    height: "300px",
+    width: "280px",
+    borderRadius: "5px",
+    fontFamily: "Century Gothic, CenturyGothic, AppleGothic, sansSerif",
   },
 };
 
@@ -71,7 +72,7 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
 
   return (
     <>
-      <button onClick={openModal}>Sign up</button>
+      <button onClick={openModal}>Sign Up</button>
       <Modal
         closeTimeoutMS={500}
         isOpen={showModal}
@@ -82,8 +83,8 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
       >
         <div className="sign-up-modal-container">
           <div className="intro-text">
-            <h2>Create your account</h2>
-            <h3>Registration is easy.</h3>
+            <h2>Registration</h2>
+            <h3>Let's Setup Your Account!</h3>
           </div>
           <form className="sign-up-form" onSubmit={onSignUp}>
             <label>Username</label>
@@ -118,7 +119,7 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
               ></input>
             </div>
             <div>
-              <label>Confirm Password</label>
+              <label>Verify Password</label>
             </div>
             <div>
               <input

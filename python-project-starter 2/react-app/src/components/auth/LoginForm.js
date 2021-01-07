@@ -13,9 +13,10 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    height: "480px",
-    width: "384px",
-    borderRadius: "20px",
+    height: "250px",
+    width: "300px",
+    borderRadius: "5px",
+    fontFamily: "Century Gothic, CenturyGothic, AppleGothic, sansSerif",
   },
 };
 
@@ -77,12 +78,8 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
         <div className="modal-login-container">
           <div className="sign-in-register">
             <div>
-              <h2 className="sign-in-header-text">Sign in</h2>
-            </div>
-            <div className="link-to-sign-up">
-              <NavLink to="/sign-up" exact={true} activeClassName="active">
-                Register
-              </NavLink>
+              <h2 className="sign-in-header-text">Welcome Back!</h2>
+              <h3>Please Enter Your Credentials</h3>
             </div>
           </div>
 
@@ -93,7 +90,9 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
               ))}
             </div>
             <div>
-              <label htmlFor="email">Email</label>
+              <div>
+                <label htmlFor="email">Email</label>
+              </div>
               <input
                 name="email"
                 type="text"
@@ -103,7 +102,9 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
               />
             </div>
             <div>
-              <label htmlFor="password">Password</label>
+              <div>
+                <label htmlFor="password">Password</label>
+              </div>
               <input
                 name="password"
                 type="password"
@@ -111,7 +112,14 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
                 value={password}
                 onChange={updatePassword}
               />
-              <button type="submit">Login</button>
+              <div>
+                <button type="submit">Login</button>
+              </div>
+              <div className="link-to-sign-up">
+                <NavLink to="/sign-up" exact={true} activeClassName="active">
+                  New User? Sign Up!
+                </NavLink>
+              </div>
             </div>
           </form>
         </div>

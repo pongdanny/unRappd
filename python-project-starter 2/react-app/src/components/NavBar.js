@@ -70,19 +70,13 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
           ></input>
           <div className="linkcontainer">
             <div className="github">
-              <NavLink to="/github" exact={true}>
-                Github
-              </NavLink>
+              <a href="https://github.com/pongdanny">Github</a>
             </div>
             <div className="linkedin">
-              <NavLink to="/linkedin" exact={true}>
-                LinkedIn
-              </NavLink>
+              <a href="https://www.linkedin.com/in/danielpong/">LinkedIn</a>
             </div>
             <div className="angellist">
-              <NavLink to="/angellist" exact={true}>
-                AngelList
-              </NavLink>
+              <a href="https://angel.co/u/dannypong">AngelList</a>
             </div>
           </div>
           {authenticated ? (
