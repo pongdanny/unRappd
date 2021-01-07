@@ -1,37 +1,134 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import LogoutButton from './auth/LogoutButton';
+import React, { useState, useEffect } from "react";
+import { NavLink, useHistory } from "react-router-dom";
+import LogoutButton from "./auth/LogoutButton";
+import LoginForm from "./auth/LoginForm";
+import SignUpForm from "./auth/SignUpForm";
+import "./NavBar.css";
 
-const NavBar = ({ setAuthenticated }) => {
+const NavBar = ({ setAuthenticated, isAuthenticated, setResults }) => {
+  const history = useHistory();
+  const [search, setSearch] = useState("");
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchAll = async () => {
+      const artistRes = await fetch("/api/artists");
+      const artistResData = await artistRes.json();
+
+      const songRes = await fetch("/api/songs");
+      const songResData = await songRes.json();
+
+      let artistsAndSongs = [];
+      artistsAndSongs.push(artistResData);
+      artistsAndSongs.push(songResData);
+
+      setData(artistsAndSongs);
+    };
+    fetchAll();
+  }, []);
+
+  const handleSubmit = () => {
+    const artistFilteredResults = data[0].filter((artist) =>
+      artist.name.toLowerCase().includes(search.toLowerCase())
+    );
+    const songFilteredResults = data[1].filter((song) =>
+      song.name.toLowerCase().includes(search.toLowerCase())
+    );
+
+    let artistsAndSongsFiltered = [];
+    artistsAndSongsFiltered.push(artistFilteredResults);
+    artistsAndSongsFiltered.push(songFilteredResults);
+    setResults(artistsAndSongsFiltered);
+    setSearch("");
+    return history.push("/search");
+  };
+
   return (
-    <nav>
-      <ul>
-        <li>
-          <NavLink to="/" exact={true} activeClassName="active">
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/login" exact={true} activeClassName="active">
-            Login
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/sign-up" exact={true} activeClassName="active">
-            Sign Up
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/users" exact={true} activeClassName="active">
-            Users
-          </NavLink>
-        </li>
-        <li>
-          <LogoutButton setAuthenticated={setAuthenticated} />
-        </li>
-      </ul>
+    <nav className="nav navbar-container">
+      <div className="upper-section">
+        <ul className="nav navbar-items">
+          <li className="nav navbar-item">
+            <NavLink to="/" exact={true} activeClassName="active">
+              <img
+                className="logo"
+                alt="unrappd logo"
+                src="../public/unrappd.png"
+              ></img>
+            </NavLink>
+          </li>
+          <input
+            className="searchbar"
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            onKeyUp={(e) => {
+              if (e.key === "Enter") {
+                return handleSubmit();
+              }
+            }}
+            placeholder="Search for Songs and Artists!"
+          ></input>
+          {isAuthenticated ? (
+            <>
+              <div className="user-container">
+                <div className="dropdown">
+                  <button className="dropbtn">
+                    <div className="you-button">You</div>
+                    <i className=""></i>
+                  </button>
+                  <div className="dropdown-content">
+                    <LogoutButton setAuthenticated={setAuthenticated} />
+                  </div>
+                </div>
+              </div>
+            </>
+          ) : (
+            <div className="login-container">
+              <li className="nav login">
+                <LoginForm
+                  authenticated={isAuthenticated}
+                  setAuthenticated={setAuthenticated}
+                />
+              </li>
+              <li className="nav sign-up">
+                <SignUpForm
+                  authenticated={isAuthenticated}
+                  setAuthenticated={setAuthenticated}
+                />
+              </li>
+            </div>
+          )}
+        </ul>
+        <div className="lower-section">
+          <div>
+            <NavLink to="/checkins" exact={true}>
+              Studio
+            </NavLink>
+          </div>
+          <div>
+            <NavLink to="/artists" exact={true}>
+              Artists
+            </NavLink>
+          </div>
+          <div>
+            <NavLink to="/songs" exact={true}>
+              Songs
+            </NavLink>
+          </div>
+          <div>
+            <NavLink to="/newartist" exact={true}>
+              New Artist
+            </NavLink>
+          </div>
+          <div>
+            <NavLink to="/newsong" exact={true}>
+              New Song
+            </NavLink>
+          </div>
+        </div>
+      </div>
     </nav>
   );
-}
+};
 
 export default NavBar;
