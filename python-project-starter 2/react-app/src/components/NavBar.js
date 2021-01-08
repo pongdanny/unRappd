@@ -12,10 +12,10 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
 
   useEffect(() => {
     const fetchAll = async () => {
-      const artistRes = await fetch("/api/artists");
+      const artistRes = await fetch("/api/artists/");
       const artistResData = await artistRes.json();
 
-      const songRes = await fetch("/api/songs");
+      const songRes = await fetch("/api/songs/");
       const songResData = await songRes.json();
 
       let artistsAndSongs = [];
@@ -49,11 +49,7 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
         <ul className="nav navbar-items">
           <li className="nav navbar-item">
             <NavLink to="/" exact={true} activeClassName="active">
-              <img
-                className="logo"
-                alt="unrappd logo"
-                src="../public/unrappd.png"
-              ></img>
+              <img className="logo" alt="unrappd logo" src=""></img>
             </NavLink>
           </li>
           <input
