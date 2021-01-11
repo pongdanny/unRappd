@@ -7,10 +7,12 @@ import ProtectedRoute from "./components/auth/ProtectedRoute";
 import UsersList from "./components/UsersList";
 import User from "./components/User";
 import { authenticate } from "./services/auth";
+import Profile from "./components/Profile/Profile";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
   const [loaded, setLoaded] = useState(false);
+  const [user] = useState({});
 
   useEffect(() => {
     (async () => {
@@ -33,6 +35,13 @@ function App() {
         authenticated={authenticated}
         // setResults={setResults}
       />
+      <ProtectedRoute
+        path="/profile"
+        exact={true}
+        authenticated={authenticated}
+      >
+        <Profile user={user} />
+      </ProtectedRoute>
       <ProtectedRoute path="/users" exact={true} authenticated={authenticated}>
         <UsersList />
       </ProtectedRoute>
