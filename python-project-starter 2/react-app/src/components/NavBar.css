@@ -197,9 +197,11 @@
 
   .active {
     color: white;
+  }
+
+  .unrappd {
     text-decoration: none;
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    font-size: 40px;
+    color: white;
   }
 
   .navbar-items {
@@ -230,7 +232,7 @@
     border-radius: 5px;
     width: 100%;
     min-width: 150px;
-    max-width: 500px;
+    max-width: 300px;
     min-height: 45px;
     height: 100%;
     padding-left: 18px;
@@ -243,7 +245,7 @@
 
   .searchbar:hover,
   .searchbar:focus {
-    border: 1px solid grey;
+    border: 1px solid black;
   }
 
   textarea:focus,
@@ -367,10 +369,6 @@
     font-size: 16px;
     border: none;
   }
-
-  /* .unrappd {
-    text decoration
-  } */
 
   .linkcontainer {
     display: flex;

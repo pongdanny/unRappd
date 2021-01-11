@@ -48,8 +48,8 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
       <div className="upper-section">
         <ul className="nav navbar-items">
           <li className="nav navbar-item">
-            <NavLink to="/" exact={true} activeClassName="active">
-              <div className="unrappd">UNRAPPD</div>
+            <NavLink to="/" exact={true} className="unrappd">
+              <div>&nbsp; UNRAPPD</div>
               {/* <img className="logo" alt="unrappd logo" src=""></img> */}
             </NavLink>
           </li>
@@ -63,7 +63,7 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
                 return handleSubmit();
               }
             }}
-            placeholder="Search for Songs and Artists!"
+            placeholder="Looking For Something? Search Here!"
           ></input>
           <div className="linkcontainer">
             <div className="github">

@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import UsersList from "./components/UsersList";
 import User from "./components/User";
+import Song from "./components/Song/Song";
 import { authenticate } from "./services/auth";
 import Profile from "./components/Profile/Profile";
 import Footer from "./components/Footer/Footer";
@@ -54,6 +55,9 @@ function App() {
         authenticated={authenticated}
       >
         <User />
+      </ProtectedRoute>
+      <ProtectedRoute path="/songs" exact={true} authenticated={authenticated}>
+        <Song user={user} />
       </ProtectedRoute>
       <ProtectedRoute path="/" exact={true} authenticated={authenticated}>
         <h1>Bump Socially</h1>

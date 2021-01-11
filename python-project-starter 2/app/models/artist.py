@@ -13,6 +13,5 @@ class Artist(db.Model):
     songs = db.relationship("Song", back_populates="artists")
     checkins = db.relationship("Checkin", back_populates="artists")
 
-
-def to_dict(self):
-    return {"id": self.id, "userId": self.userId, "artistName": self.artistName, "description": self.description}
+    def to_dict(self):
+        return {"id": self.id, "userId": self.userId, "artistName": self.artistName, "description": self.description}
