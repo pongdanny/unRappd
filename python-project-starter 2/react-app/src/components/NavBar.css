@@ -178,7 +178,7 @@
     align-items: center;
     top: 0px;
     width: 100%;
-    background-color: white;
+    background-color: black;
     border-bottom: 1px solid rgba(5, 4, 4, 0.068);
   }
 
@@ -196,7 +196,10 @@
   }
 
   .active {
-    color: black;
+    color: white;
+    text-decoration: none;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 40px;
   }
 
   .navbar-items {
@@ -273,7 +276,7 @@
 
   .navbar a:hover,
   .dropdown:hover .dropbtn {
-    background-color: lightgray;
+    background-color: white;
     /* border: 1px solid grey; */
   }
 
@@ -288,22 +291,33 @@
 
   .dropdown-content a {
     float: none;
-    color: black;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
   }
 
+  .you-button {
+    color: white;
+  }
+
+  .you-button:hover {
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid white;
+  }
+
   .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: white;
   }
 
   .dropdown-content > button {
     font-size: 15px;
     padding: 6px 8px;
     background-color: white;
-    border: 1px solid lightgray;
+    border: 1px solid white;
     border-radius: 5px;
     cursor: pointer;
   }
@@ -323,7 +337,7 @@
   }
 
   .lower-section a {
-    color: black;
+    color: white;
     text-decoration: none;
     margin: 0px 40px;
     min-width: 75px;
@@ -331,7 +345,10 @@
   }
 
   .lower-section a:hover {
-    border-bottom: 1px solid black;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
   }
 
   .login-container {
@@ -344,15 +361,16 @@
   }
 
   .login-container button {
-    color: black;
+    color: white;
     text-decoration: none;
     background-color: transparent;
     font-size: 16px;
     border: none;
   }
 
-  .logo {
-  }
+  /* .unrappd {
+    text decoration
+  } */
 
   .linkcontainer {
     display: flex;
@@ -363,15 +381,21 @@
   .github {
     background-image: url("https://img.icons8.com/ios-filled/50/000000/github.png");
     background-size: 100% 100%;
+    background-color: white;
+    border-radius: 5px;
   }
 
   .linkedin {
     background-image: url("https://img.icons8.com/ios-filled/50/000000/linkedin.png");
     background-size: 100% 100%;
+    background-color: white;
+    border-radius: 5px;
   }
 
   .angellist {
     background-image: url("https://img.icons8.com/ios-filled/50/000000/angelist.png");
     background-size: 100% 100%;
+    background-color: white;
+    border-radius: 5px;
   }
 }

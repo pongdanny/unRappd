@@ -6,12 +6,12 @@ const Footer = () => {
     <div className="footer">
       <div className="title">
         UNRAPPD
-        <div className=""></div>
+        <div className="divider"></div>
       </div>
-      <div className="">
-        <p>Inspired by UNTAPPD!</p>
+      <div className="about">
+        <a href="https://untappd.com">Inspired by UNTAPPD!</a>
       </div>
-      <div className="developers">
+      <div className="links">
         <a
           href="https://github.com/pongdanny/unRappd"
           target="_blank"

@@ -28,18 +28,3 @@ def delete_artist(id):
         return {"errors": [f"Artist does not exist!"]}
 
 
-# @artist_routes.route("/", methods=["GET"])
-# def artists():
-#     artists = db.session.query(Artist).options(selectinload(Artist.user)).all()
-
-#     artists_with_user = [{**artists.to_dict(), "user": artists.user.to_dict()}
-#                         for artist in artists]
-
-#     return jsonify(artists_with_user)
-
-
-# @artist_routes.route("/<id>")
-# def artist(id):
-#     artist = db.session.query(Artist).get(id)
-
-

@@ -8,17 +8,20 @@ import UsersList from "./components/UsersList";
 import User from "./components/User";
 import { authenticate } from "./services/auth";
 import Profile from "./components/Profile/Profile";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
   const [loaded, setLoaded] = useState(false);
-  const [user] = useState({});
-
+  const [user, setUser] = useState({});
+  // const [currentUser, setCurrentUser] = useState("");
+  // const [currentUserId, setCurrentUserId] = useState("");
   useEffect(() => {
     (async () => {
       const user = await authenticate();
       if (!user.errors) {
         setAuthenticated(true);
+        setUser(user);
       }
       setLoaded(true);
     })();
@@ -42,9 +45,9 @@ function App() {
       >
         <Profile user={user} />
       </ProtectedRoute>
-      <ProtectedRoute path="/users" exact={true} authenticated={authenticated}>
+      {/* <ProtectedRoute path="/users" exact={true} authenticated={authenticated}>
         <UsersList />
-      </ProtectedRoute>
+      </ProtectedRoute> */}
       <ProtectedRoute
         path="/users/:userId"
         exact={true}
@@ -55,6 +58,7 @@ function App() {
       <ProtectedRoute path="/" exact={true} authenticated={authenticated}>
         <h1>Bump Socially</h1>
       </ProtectedRoute>
+      <Footer />
     </BrowserRouter>
   );
 }

@@ -1,5 +1,5 @@
 export const getCheckins = async (id) => {
-  const res = await fetch(`/api/movies/${id}/reviews`);
+  const res = await fetch(`/api/checkins/`);
   if (res.ok) {
     return await res.json();
   } else if (res.status === 404) {
@@ -16,7 +16,7 @@ export const createCheckin = async (
   review,
   rating
 ) => {
-  const response = await fetch(`/api/users/${userId}/reviews`, {
+  const response = await fetch(`/api/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

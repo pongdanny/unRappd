@@ -5,6 +5,7 @@ from sqlalchemy.orm import selectinload
 
 song_routes = Blueprint('songs', __name__)
 
+
 @song_routes.route('/', methods=["GET"])
 def get_all_song():
     songs = Song.query.all()
@@ -25,21 +26,3 @@ def delete_song(id):
         return {"response": [f"Song has been deleted!"]}
     else:
         return {"errors": [f"Song does not exist!"]}
-
-# @song_routes.route("/", methods=["GET"])
-# def songs():
-#     songs = db.session.query(Song).options(selectinload(Song.user)).all()
-
-#     songs_with_artist = [{**song.to_dict(), "song": artist.song.to_dict()}
-#                         for song in songs]
-
-#     return jsonify(songs_with_artist)
-
-
-# @song_routes.route("/<id>")
-# def song(id):
-#     song = db.session.query(Song).get(id)
-
-#     return jsonify(song.to_dict())
-
-

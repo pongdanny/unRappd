@@ -20,10 +20,3 @@ def user(id):
     return user.to_dict()
 
 
-# @user_routes.route("/<userId>/artists/<artistId>")
-# def user_artists(userId, artistId):
-#     artists = db.session.query(Artist).filter_by(userId).filter(Item.id != itemId).all()
-
-#     user_items = [item.to_dict() for item in items]
-
-#     return jsonify(user_artists)

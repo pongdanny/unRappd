@@ -49,7 +49,8 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
         <ul className="nav navbar-items">
           <li className="nav navbar-item">
             <NavLink to="/" exact={true} activeClassName="active">
-              <img className="logo" alt="unrappd logo" src=""></img>
+              <div className="unrappd">UNRAPPD</div>
+              {/* <img className="logo" alt="unrappd logo" src=""></img> */}
             </NavLink>
           </li>
           <input
