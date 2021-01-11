@@ -4,7 +4,7 @@ from wtforms.validators import DataRequired
 from app.models import Checkin
 
 
-class ReviewForm(FlaskForm):
+class CheckinForm(FlaskForm):
     userId = IntegerField("userId", validators=[DataRequired()])
     songId = IntegerField("songId", validators=[DataRequired()])
     artistId = IntegerField("artistId", validators=[DataRequired()])
