@@ -1,5 +1,5 @@
 .footer {
-  border-top: solid 2px white;
+  /* border-top: solid 2px white; */
   background-color: black;
   width: 90%;
   padding: 50px;
@@ -9,7 +9,7 @@
   overflow: hidden;
   right: 20px;
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-  margin-top: 420px;
+  /* margin-top: 420px; */
 }
 
 .about {
@@ -28,15 +28,15 @@
 
 .title {
   min-width: 700px;
-  font-size: 70px;
+  font-size: 50px;
   color: white;
   position: relative;
-  right: 150px;
+  right: 107px;
 }
 
 .divider {
   top: 75px;
-  background-color: black;
+  background-color: transparent;
   position: absolute;
   width: 100%;
   height: 5px;

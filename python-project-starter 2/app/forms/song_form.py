@@ -4,7 +4,7 @@ from wtforms.validators import DataRequired
 from app.models import Song
 
 
-class ArtistForm(FlaskForm):
+class SongForm(FlaskForm):
     artistId = IntegerField("artistId", validators=[DataRequired()])
     songName = TextAreaField("songName", validators=[DataRequired()])
     albumName = TextAreaField("albumName", validators=[DataRequired()])

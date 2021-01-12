@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./NewArtist.css";
+import { createArtist } from "../../services/artist";
+// import "./NewArtist.css";
 
 const ArtistForm = ({ user }) => {
   const [userId, setUserId] = useState("");
@@ -11,25 +12,36 @@ const ArtistForm = ({ user }) => {
     (async () => {})();
   }, [user]);
 
+  const newArtistSubmit = async (e) => {
+    e.preventDefault();
+    const newArtist = await createArtist(
+      userId,
+      songId,
+      artistName,
+      description
+    );
+    return newArtist;
+  };
+
   return (
     <>
       <form className="newArtistForm">
         <label className="userId">User ID</label>
-        <textarea
+        <input
           name="userId"
           placeholder="Add User ID"
           value={userId}
           onChange={setUserId}
         />
         <label className="songId">Song ID</label>
-        <textarea
+        <input
           name="songId"
           placeholder="Add Song ID"
           value={songId}
           onChange={setSongId}
         />
         <label className="artistName">Artist Name</label>
-        <textarea
+        <input
           name="artistName"
           placeholder="Add Artist Name"
           value={artistName}
@@ -43,7 +55,7 @@ const ArtistForm = ({ user }) => {
           onChange={setDescription}
         />
       </form>
-      <button>Submit</button>
+      <button onClick={newArtistSubmit}>Submit</button>
     </>
   );
 };

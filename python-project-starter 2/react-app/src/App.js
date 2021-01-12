@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 // import SignUpForm from "./components/auth/SignUpForm";
 import NavBar from "./components/NavBar";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
-import UsersList from "./components/UsersList";
+// import UsersList from "./components/UsersList";
 import User from "./components/User";
 import Song from "./components/Song/Song";
 import { authenticate } from "./services/auth";
@@ -12,6 +12,9 @@ import Profile from "./components/Profile/Profile";
 import Footer from "./components/Footer/Footer";
 import Artist from "./components/Artist/Artist";
 import Studio from "./components/Studio/Studio";
+import ArtistForm from "./components/NewArtist/NewArtist";
+import SongForm from "./components/NewSong/NewSong";
+import Home from "./components/Home/Home";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -76,7 +79,22 @@ function App() {
         <Artist user={user} />
       </ProtectedRoute>
       <ProtectedRoute path="/" exact={true} authenticated={authenticated}>
-        <h1>Bump Socially</h1>
+        <Home />
+        {/* <h1>Bump Socially</h1> */}
+      </ProtectedRoute>
+      <ProtectedRoute
+        path="/newartist"
+        exact={true}
+        authenticated={authenticated}
+      >
+        <ArtistForm user={user} />
+      </ProtectedRoute>
+      <ProtectedRoute
+        path="/newsong"
+        exact={true}
+        authenticated={authenticated}
+      >
+        <SongForm user={user} />
       </ProtectedRoute>
       <Footer />
     </BrowserRouter>

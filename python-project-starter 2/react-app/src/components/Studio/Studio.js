@@ -15,16 +15,21 @@ const Studio = ({ user }) => {
   return (
     <div>
       <div>
-        <div>Check out the Recent Bumps!</div>
-        <div>:)</div>
-        <div>{user.id}</div>
+        <h1>Check out the Recent Bumps!</h1>
+        <h2>:)</h2>
+        <button>Bump a Song</button>
       </div>
       <div>
         <section>
           <h1>
-            Checkins: {/* Math.floor(Math.random() * 10) */}
-            {checkin && [checkin[1].review, checkin[2].review]}
+            0: {/* Math.floor(Math.random() * 10) */}
+            {checkin && checkin[0].review}
           </h1>
+          <h1>1: {checkin && checkin[1].review}</h1>
+          <h1>2: {checkin && checkin[2].review}</h1>
+          <h1>3: {checkin && checkin[3].review}</h1>
+          <h1>4: {checkin && checkin[4].review}</h1>
+          <h1>5: {checkin && checkin[5].review}</h1>
         </section>
       </div>
     </div>
