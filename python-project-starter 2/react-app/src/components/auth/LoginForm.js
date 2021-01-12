@@ -23,7 +23,6 @@ const customStyles = {
 Modal.setAppElement("#root");
 
 const LoginForm = ({ authenticated, setAuthenticated }) => {
-  // const history = useHistory();
   const [errors, setErrors] = useState([]);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -33,9 +32,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
     setShowModal(true);
   }
 
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-  }
+  function afterOpenModal() {}
 
   function closeModal() {
     setShowModal(false);

@@ -21,7 +21,10 @@ const Studio = ({ user }) => {
       </div>
       <div>
         <section>
-          <h1>Checkins: {checkin && checkin[0].review}</h1>
+          <h1>
+            Checkins: {/* Math.floor(Math.random() * 10) */}
+            {checkin && [checkin[1].review, checkin[2].review]}
+          </h1>
         </section>
       </div>
     </div>
