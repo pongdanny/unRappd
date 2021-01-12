@@ -16,8 +16,8 @@ function Song({ user }) {
   return (
     <div>
       <div>
-        <div>Hey There!</div>
-        <div>Email:</div>
+        <div>List of Available Songs!</div>
+        <div>Feel Free to Add More!</div>
         <div></div>
       </div>
       <div>

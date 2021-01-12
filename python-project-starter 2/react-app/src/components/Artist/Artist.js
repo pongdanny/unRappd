@@ -1,32 +1,32 @@
 import React, { useState, useEffect } from "react";
 // import { useParams } from "react-router-dom";
 import "./Artist.css";
-import { getSongs } from "../../services/artist";
+import { getArtists } from "../../services/artist";
 
 function Artist({ user }) {
-  const [song, setArtist] = useState(null);
+  const [artist, setArtist] = useState(null);
   useEffect(() => {
     (async () => {
       const res = await getArtists(user);
-      console.log("song", res);
-      setSong(res.songs);
+      console.log("artist", res);
+      setArtist(res.artists);
     })();
   }, [user]);
 
   return (
     <div>
       <div>
-        <div>Hey There!</div>
-        <div>Email:</div>
+        <div>List of Available Artists!</div>
+        <div>Feel Free to Add More!</div>
         <div></div>
       </div>
       <div>
         <section>
-          <h1>Songs: {song && song[0].songName}</h1>
+          <h1>Artists: {artist && artist[0].artistName}</h1>
         </section>
       </div>
     </div>
   );
 }
 
-export default Song;
+export default Artist;

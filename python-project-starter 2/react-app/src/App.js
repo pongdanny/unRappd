@@ -10,6 +10,7 @@ import Song from "./components/Song/Song";
 import { authenticate } from "./services/auth";
 import Profile from "./components/Profile/Profile";
 import Footer from "./components/Footer/Footer";
+import Artist from "./components/Artist/Artist";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -58,6 +59,13 @@ function App() {
       </ProtectedRoute>
       <ProtectedRoute path="/songs" exact={true} authenticated={authenticated}>
         <Song user={user} />
+      </ProtectedRoute>
+      <ProtectedRoute
+        path="/artists"
+        exact={true}
+        authenticated={authenticated}
+      >
+        <Artist user={user} />
       </ProtectedRoute>
       <ProtectedRoute path="/" exact={true} authenticated={authenticated}>
         <h1>Bump Socially</h1>
