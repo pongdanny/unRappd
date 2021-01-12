@@ -11,6 +11,7 @@ import { authenticate } from "./services/auth";
 import Profile from "./components/Profile/Profile";
 import Footer from "./components/Footer/Footer";
 import Artist from "./components/Artist/Artist";
+import Studio from "./components/Studio/Studio";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -56,6 +57,13 @@ function App() {
         authenticated={authenticated}
       >
         <User />
+      </ProtectedRoute>
+      <ProtectedRoute
+        path="/checkins"
+        exact={true}
+        authenticated={authenticated}
+      >
+        <Studio user={user} />
       </ProtectedRoute>
       <ProtectedRoute path="/songs" exact={true} authenticated={authenticated}>
         <Song user={user} />

@@ -301,11 +301,12 @@
   }
 
   .you-button {
-    color: white;
+    color: grey;
+    text-decoration: none;
   }
 
   .you-button:hover {
-    color: black;
+    color: grey;
     background-color: white;
     border-radius: 5px;
     border: 1px solid white;

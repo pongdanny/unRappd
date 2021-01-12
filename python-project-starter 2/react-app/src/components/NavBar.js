@@ -81,7 +81,9 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
               <div className="user-container">
                 <div className="dropdown">
                   <button className="dropbtn">
-                    <div className="you-button">Profile</div>
+                    <a href="/profile" className="you-button">
+                      Profile
+                    </a>
                     <i className=""></i>
                   </button>
                   <div className="dropdown-content">

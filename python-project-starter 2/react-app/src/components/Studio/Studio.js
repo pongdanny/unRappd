@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./Profile.css";
+// import "./Studio.css";
 import { getCheckins } from "../../services/checkin";
 
-const Profile = ({ user }) => {
+const Studio = ({ user }) => {
   const [checkin, setCheckin] = useState(null);
   useEffect(() => {
     (async () => {
@@ -15,9 +15,9 @@ const Profile = ({ user }) => {
   return (
     <div>
       <div>
-        <div>Hey There {user.username}!</div>
-        <div>Email: {user.email}</div>
-        <div></div>
+        <div>Check out the Recent Bumps!</div>
+        <div>:)</div>
+        <div>{user.id}</div>
       </div>
       <div>
         <section>
@@ -28,4 +28,4 @@ const Profile = ({ user }) => {
   );
 };
 
-export default Profile;
+export default Studio;
