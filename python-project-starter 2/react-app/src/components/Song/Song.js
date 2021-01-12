@@ -3,15 +3,15 @@ import React, { useState, useEffect } from "react";
 import "./Song.css";
 import { getSongs } from "../../services/song";
 
-function Song() {
-  const [song, setSong] = useState({});
+function Song({ user }) {
+  const [song, setSong] = useState(null);
   useEffect(() => {
     (async () => {
-      const res = await getSongs();
+      const res = await getSongs(user);
       console.log("song", res);
       setSong(res.songs);
     })();
-  }, []);
+  }, [user]);
 
   return (
     <div>

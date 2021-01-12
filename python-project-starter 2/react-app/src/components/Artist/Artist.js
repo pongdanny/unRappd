@@ -1,34 +1,32 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
+import "./Artist.css";
+import { getSongs } from "../../services/artist";
 
-function Artist() {
-  const [artist, setArtist] = useState({});
-  // Notice we use useParams here instead of getting the params
-  // From props.
-  const { artistId } = useParams();
-
+function Artist({ user }) {
+  const [song, setArtist] = useState(null);
   useEffect(() => {
-    const fetchAll = async () => {
-      const response = await fetch(`/api/artists`);
-      const artist = await response.json();
-      setArtist(artist);
-    };
-    fetchAll();
-  }, []);
-
-  if (!user) {
-    return null;
-  }
+    (async () => {
+      const res = await getArtists(user);
+      console.log("song", res);
+      setSong(res.songs);
+    })();
+  }, [user]);
 
   return (
-    <ul>
-      <li>
-        <strong>Artist</strong> {artist.artistName}
-      </li>
-      <li>
-        <strong>Description</strong> {artist.description}
-      </li>
-    </ul>
+    <div>
+      <div>
+        <div>Hey There!</div>
+        <div>Email:</div>
+        <div></div>
+      </div>
+      <div>
+        <section>
+          <h1>Songs: {song && song[0].songName}</h1>
+        </section>
+      </div>
+    </div>
   );
 }
-export default Artist;
+
+export default Song;
