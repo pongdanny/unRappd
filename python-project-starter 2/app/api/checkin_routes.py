@@ -29,3 +29,26 @@ def delete_checkin(id):
         return {"response": [f"Checkin has been deleted!"]}
     else:
         return {"errors": [f"Checkin does not exist"]}
+
+
+@checkin_routes.route("/", methods=["POST"])
+def new_checkin():
+    user_id = request.json["userId"]
+    songId = request.json["songId"]
+    artistId = request.json["artistId"]
+    review = request.json["review"]
+    rating = request.json["rating"]
+    
+    new_checkin_info = Checkin(
+        userId=userId,
+        songId=songId,
+        artistId=artistId,
+        review=review,
+        rating=rating
+    )
+
+    db.session.add(new_checkin_info)
+    db.session.commit()
+
+    info = new_checkin_info()
+    return jsonify({"Checkin Info": info})

@@ -28,3 +28,4 @@ def delete_artist(id):
         return {"errors": [f"Artist does not exist!"]}
 
 
+
