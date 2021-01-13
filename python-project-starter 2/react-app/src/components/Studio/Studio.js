@@ -21,6 +21,16 @@ const Studio = ({ user }) => {
       </div>
       <div>
         <section>
+          <div>
+            {checkin &&
+              checkin.map((mappedCheckin, idx) => {
+                return (
+                  <div>
+                    {idx + 1} : {mappedCheckin.review}
+                  </div>
+                );
+              })}
+          </div>
           <h1>
             0: {/* Math.floor(Math.random() * 10) */}
             {checkin && checkin[0].review}

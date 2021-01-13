@@ -1,9 +1,21 @@
 from flask import Blueprint, jsonify, session, request
 from app.models import Checkin, db
 from sqlalchemy.orm import selectinload
+from app.forms import checkin_form
 
 
 checkin_routes = Blueprint('checkins', __name__)
+
+
+def validator_errors_to_error_messages(validation_errors):
+    """
+    Simple function that turns the WTForms validation errors into a simple list
+    """
+    errorMessages = []
+    for field in validation_errors:
+        for error in validation_errors[field]:
+            errorMessages.append(f"{field} : {error}")
+    return errorMessages
 
 
 @checkin_routes.route('/', methods=["GET"])
@@ -33,22 +45,30 @@ def delete_checkin(id):
 
 @checkin_routes.route("/", methods=["POST"])
 def new_checkin():
-    user_id = request.json["userId"]
-    songId = request.json["songId"]
-    artistId = request.json["artistId"]
-    review = request.json["review"]
-    rating = request.json["rating"]
-    
-    new_checkin_info = Checkin(
-        userId=userId,
-        songId=songId,
-        artistId=artistId,
-        review=review,
-        rating=rating
-    )
+    form = NewCheckin()
+    form['csrf_token'].data = request.cookies['csrf_token']
 
-    db.session.add(new_checkin_info)
-    db.session.commit()
+    for key in dict.keys(form.data):
+        print(key)
+        print('\t', form.data[key])
 
-    info = new_checkin_info()
-    return jsonify({"Checkin Info": info})
+    if form.validate_on_submit():
+        checkin = Checkin(
+            user_id=form.data["userId"],
+            songId=form.data["songId"],
+            artistId=form.data["artistId"],
+            review=form.data["review"],
+            rating=form.data["rating"]
+        )
+        db.session.add(checkin)
+        db.session.commit()
+
+        print(checkin.id)
+
+        db.session.add(checkin)
+        db.session.commit()
+
+        return checkin.to_dict()
+
+        return checkin.to_dict()
+    return {'errors': validator_errors_to_error_messages(form.errors)}
