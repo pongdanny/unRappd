@@ -22,16 +22,16 @@ function Song({ user }) {
       </div>
       <div>
         <section>
-          <h1>0: {song && [song[0].songName, " : ", song[0].albumName]}</h1>
-          <h1>2: {song && [song[2].songName, " : ", song[2].albumName]}</h1>
-          <h1>4: {song && [song[4].songName, " : ", song[4].albumName]}</h1>
-          <h1>6: {song && [song[6].songName, " : ", song[6].albumName]}</h1>
-          <h1>8: {song && [song[8].songName, " : ", song[8].albumName]}</h1>
-          <h1>10: {song && [song[10].songName, " : ", song[10].albumName]}</h1>
-          <h1>12: {song && [song[12].songName, " : ", song[12].albumName]}</h1>
-          <h1>14: {song && [song[14].songName, " : ", song[14].albumName]}</h1>
-          <h1>16: {song && [song[16].songName, " : ", song[16].albumName]}</h1>
-          <h1>18: {song && [song[18].songName, " : ", song[18].albumName]}</h1>
+          <div>
+            {song &&
+              song.map((mappedSong, idx) => {
+                return (
+                  <div>
+                    {idx + 1} : {mappedSong.songName}
+                  </div>
+                );
+              })}
+          </div>
         </section>
       </div>
     </div>

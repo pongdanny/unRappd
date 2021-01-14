@@ -22,36 +22,16 @@ function Artist({ user }) {
       </div>
       <div>
         <section>
-          <h1>
-            0: {artist && [artist[0].artistName, " : ", artist[0].description]}
-          </h1>
-          <h1>
-            1: {artist && [artist[1].artistName, " : ", artist[1].description]}
-          </h1>
-          <h1>
-            2: {artist && [artist[2].artistName, " : ", artist[2].description]}
-          </h1>
-          <h1>
-            3: {artist && [artist[3].artistName, " : ", artist[3].description]}
-          </h1>
-          <h1>
-            4: {artist && [artist[4].artistName, " : ", artist[4].description]}
-          </h1>
-          <h1>
-            5: {artist && [artist[5].artistName, " : ", artist[5].description]}
-          </h1>
-          <h1>
-            6: {artist && [artist[6].artistName, " : ", artist[6].description]}
-          </h1>
-          <h1>
-            7: {artist && [artist[7].artistName, " : ", artist[7].description]}
-          </h1>
-          <h1>
-            8: {artist && [artist[8].artistName, " : ", artist[8].description]}
-          </h1>
-          <h1>
-            9: {artist && [artist[9].artistName, " : ", artist[9].description]}
-          </h1>
+          <div>
+            {artist &&
+              artist.map((mappedArtist, idx) => {
+                return (
+                  <div>
+                    {idx + 1} : {mappedArtist.artistName}
+                  </div>
+                );
+              })}
+          </div>
         </section>
       </div>
     </div>
