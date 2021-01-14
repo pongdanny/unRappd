@@ -11,6 +11,18 @@ const SongForm = ({ user }) => {
     (async () => {})();
   }, [user]);
 
+  const updateArtistId = (e) => {
+    setArtistId(e.target.value);
+  };
+
+  const updateSongName = (e) => {
+    setSongName(e.target.value);
+  };
+
+  const updateAlbumName = (e) => {
+    setAlbumName(e.target.value);
+  };
+
   const newSongSubmit = async (e) => {
     e.preventDefault();
     const newSong = await createSong(artistId, songName, albumName);
@@ -26,21 +38,21 @@ const SongForm = ({ user }) => {
             name="artistId"
             placeholder="Add Artist ID"
             value={artistId}
-            onChange={setArtistId}
+            onChange={updateArtistId}
           />
           <label className="songName">Song Name</label>
           <input
             name="songName"
             placeholder="Add Song Name"
             value={songName}
-            onChange={setSongName}
+            onChange={updateSongName}
           />
           <label className="albumName">Album Name</label>
           <input
             name="albumName"
             placeholder="Add Album Name"
             value={albumName}
-            onChange={setAlbumName}
+            onChange={updateAlbumName}
           />
         </div>
       </form>

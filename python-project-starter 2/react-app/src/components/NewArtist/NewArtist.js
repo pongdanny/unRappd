@@ -27,6 +27,7 @@ const ArtistForm = ({ user }) => {
   const updateDescription = (e) => {
     setDescription(e.target.value);
   };
+
   const newArtistSubmit = async (e) => {
     e.preventDefault();
     const newArtist = await createArtist(
