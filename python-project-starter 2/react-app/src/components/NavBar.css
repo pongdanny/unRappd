@@ -202,6 +202,7 @@
   .unrappd {
     text-decoration: none;
     color: white;
+    font-size: 20px;
   }
 
   .navbar-items {
@@ -216,7 +217,7 @@
   .user-container {
     display: flex;
     justify-content: space-between;
-    width: 150px;
+    width: 75px;
     align-items: center;
     margin-right: 45px;
   }
@@ -276,12 +277,6 @@
     width: 55px;
   }
 
-  .navbar a:hover,
-  .dropdown:hover .dropbtn {
-    background-color: white;
-    /* border: 1px solid grey; */
-  }
-
   .dropdown-content {
     display: none;
     position: absolute;
@@ -307,29 +302,36 @@
 
   .you-button:hover {
     color: grey;
-    background-color: white;
+    background-color: black;
     border-radius: 5px;
-    border: 1px solid white;
+    border: 1px solid black;
   }
 
   .dropdown-content a:hover {
-    background-color: white;
+    background-color: black;
+  }
+
+  .usericon {
+    height: 70px;
+    width: 70px;
+    margin-left: -20px;
   }
 
   .dropdown-content > button {
     font-size: 15px;
-    padding: 6px 8px;
+    padding: 8px 6px;
+    margin-left: -10px;
     background-color: white;
-    border: 1px solid white;
-    border-radius: 5px;
+    border: 1px solid black;
     cursor: pointer;
+    border-radius: 5px;
   }
 
   .dropdown:hover .dropdown-content {
     font-size: 15px;
     padding: 4px;
     padding-top: 0px;
-    background-color: white;
+    /* background-color: white; */
     display: block;
   }
 

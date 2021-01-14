@@ -49,7 +49,7 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
         <ul className="nav navbar-items">
           <li className="nav navbar-item">
             <NavLink to="/" exact={true} className="unrappd">
-              <div>&nbsp; UNRAPPD</div>
+              <div>&nbsp; &nbsp; &nbsp; &nbsp;UNRAPPD</div>
               {/* <img className="logo" alt="unrappd logo" src=""></img> */}
             </NavLink>
           </li>
@@ -82,7 +82,10 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
                 <div className="dropdown">
                   <button className="dropbtn">
                     <a href="/profile" className="you-button">
-                      Profile
+                      <img
+                        className="usericon"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL4gjlRnYx_Syp-ktNGolRWqP0LXuVL4ddjg&usqp=CAU"
+                      ></img>
                     </a>
                     <i className=""></i>
                   </button>
