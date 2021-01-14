@@ -12,13 +12,15 @@ class Checkin(db.Model):
     rating = db.Column(db.Integer)
 
     user = db.relationship("User", back_populates="checkins")
-    artists = db.relationship("Artist", back_populates="checkins")
-    songs = db.relationship("Song", back_populates="checkins")
+    artist = db.relationship("Artist", back_populates="checkins")
+    song = db.relationship("Song", back_populates="checkins")
 
     def to_dict(self):
         return {
             "id": self.id, 
             "songId": self.songId, 
+            "song": self.song.to_dict(),
+            "artist": self.artist.to_dict(),
             "artistId": self.artistId, 
             "review": self.review, 
             "rating": self.rating

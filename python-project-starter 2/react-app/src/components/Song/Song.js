@@ -4,12 +4,12 @@ import "./Song.css";
 import { getSongs } from "../../services/song";
 
 function Song({ user }) {
-  const [song, setSong] = useState(null);
+  const [songs, setSongs] = useState(null);
   useEffect(() => {
     (async () => {
       const res = await getSongs(user);
       console.log("song", res);
-      setSong(res.songs);
+      setSongs(res.songs);
     })();
   }, [user]);
 
@@ -23,11 +23,11 @@ function Song({ user }) {
       <div>
         <section>
           <div>
-            {song &&
-              song.map((mappedSong, idx) => {
+            {songs &&
+              songs.map((mappedSong, idx) => {
                 return (
                   <div>
-                    {idx + 1} : {mappedSong.songName}
+                    {mappedSong.artist.artistName} : {mappedSong.songName}
                   </div>
                 );
               })}

@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
 // import "./Studio.css";
 import { getCheckins } from "../../services/checkin";
+import { getSongs } from "../../services/song";
+import Song from "../Song/Song";
 
 const Studio = ({ user }) => {
-  const [checkin, setCheckin] = useState(null);
+  const [checkins, setCheckins] = useState(null);
   useEffect(() => {
     (async () => {
       const res = await getCheckins(user);
-      console.log("checkin", res);
-      setCheckin(res.checkins);
+      console.log("checkins", res);
+      setCheckins(res.checkins);
     })();
   }, [user]);
 
@@ -16,17 +18,22 @@ const Studio = ({ user }) => {
     <div>
       <div>
         <h1>Check out the Recent Bumps!</h1>
-        <h2>:)</h2>
+        <h2>
+          user {user.username} is bumping{" "}
+          {checkins && checkins[0].song.songName}
+        </h2>
         <button>Bump a Song</button>
       </div>
       <div>
         <section>
           <div>
-            {checkin &&
-              checkin.map((mappedCheckin, idx) => {
+            {checkins &&
+              checkins.map((mappedCheckin, idx) => {
                 return (
                   <div>
-                    {idx + 1} : {mappedCheckin.review}
+                    {" "}
+                    {mappedCheckin.song.songName} :{" "}
+                    {mappedCheckin.artist.artistName} : {mappedCheckin.review}
                   </div>
                 );
               })}

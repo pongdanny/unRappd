@@ -10,8 +10,8 @@ class Artist(db.Model):
     description = db.Column(db.String)
 
     user = db.relationship("User", back_populates="artists")
-    songs = db.relationship("Song", back_populates="artists")
-    checkins = db.relationship("Checkin", back_populates="artists")
+    songs = db.relationship("Song", back_populates="artist")
+    checkins = db.relationship("Checkin", back_populates="artist")
 
     def to_dict(self):
         return {"id": self.id, "userId": self.userId, "artistName": self.artistName, "description": self.description}
