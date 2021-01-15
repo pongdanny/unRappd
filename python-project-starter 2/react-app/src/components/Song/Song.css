@@ -8,6 +8,8 @@
 .songdetails {
   text-decoration: none;
   color: red;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 .songtext {

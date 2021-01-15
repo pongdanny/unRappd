@@ -8,6 +8,8 @@
 .artistdetails {
   text-decoration: none;
   color: blue;
+  padding-top: 11px;
+  padding-bottom: 11px;
 }
 
 .artisttext {
