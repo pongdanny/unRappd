@@ -23,5 +23,6 @@ class Checkin(db.Model):
             "artist": self.artist.to_dict(),
             "artistId": self.artistId, 
             "review": self.review, 
-            "rating": self.rating
+            "rating": self.rating,
+            "user": self.user.to_dict()
         }

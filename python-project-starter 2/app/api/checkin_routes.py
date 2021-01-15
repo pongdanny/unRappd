@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify, session, request
 from app.models import Checkin, db
 from sqlalchemy.orm import selectinload
-from app.forms import checkin_form
+from app.forms import CheckinForm
 
 
 checkin_routes = Blueprint('checkins', __name__)
@@ -43,9 +43,9 @@ def delete_checkin(id):
         return {"errors": [f"Checkin does not exist"]}
 
 
-@checkin_routes.route("/", methods=["POST"])
+@checkin_routes.route("/create", methods=["POST"])
 def new_checkin():
-    form = NewCheckin()
+    form = CheckinForm()
     form['csrf_token'].data = request.cookies['csrf_token']
 
     for key in dict.keys(form.data):
@@ -64,11 +64,6 @@ def new_checkin():
         db.session.commit()
 
         print(checkin.id)
-
-        db.session.add(checkin)
-        db.session.commit()
-
-        return checkin.to_dict()
 
         return checkin.to_dict()
     return {'errors': validator_errors_to_error_messages(form.errors)}

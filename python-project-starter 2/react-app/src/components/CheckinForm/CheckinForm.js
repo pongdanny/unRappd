@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import React, { useState } from "react";
 import { createCheckin, getCheckins } from "../../services/checkin";
-// import './CheckinForm.css';
+import "./CheckinForm.css";
 
 const CheckinForm = ({}) => {
   const [userId, setUserId] = useState("");
@@ -44,8 +43,13 @@ const CheckinForm = ({}) => {
 
   return (
     <>
+      <img
+        className="checkinimg"
+        src="https://cdn.pixabay.com/photo/2016/03/30/05/41/music-1290087_960_720.jpg"
+      ></img>
+      <div className="addnewsong">Add a New Bump! 🎵</div>
       <form className="newCheckinForm">
-        <div className="artistContainer">
+        <div className="checkincontainer">
           <label className="userId">User ID</label>
           <input
             name="userId"
@@ -81,9 +85,11 @@ const CheckinForm = ({}) => {
             value={rating}
             onChange={updateRating}
           />
+          <button className="checkinsubmit" onClick={newCheckinSubmit}>
+            Submit
+          </button>
         </div>
       </form>
-      <button onClick={newCheckinSubmit}>Submit</button>
     </>
   );
 };

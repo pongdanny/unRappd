@@ -1,5 +1,19 @@
 .artistlist {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px;
+  align-items: center;
+}
+
+.artistdetails {
+  text-decoration: none;
   color: blue;
-  padding-left: 5px;
-  padding-top: 50px;
+}
+
+.artisttext {
+  padding-left: 560px;
+}
+
+.artistsubtext {
+  padding-left: 600px;
 }

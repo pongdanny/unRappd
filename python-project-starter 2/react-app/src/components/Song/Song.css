@@ -1,0 +1,19 @@
+.songlist {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px;
+  align-items: center;
+}
+
+.songdetails {
+  text-decoration: none;
+  color: red;
+}
+
+.songtext {
+  padding-left: 560px;
+}
+
+.songsubtext {
+  padding-left: 600px;
+}

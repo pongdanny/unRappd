@@ -16,19 +16,21 @@ function Song({ user }) {
   return (
     <div>
       <div>
-        <h1>List of Available Songs!</h1>
-        <h2>Feel Free to Add More!</h2>
+        <h1 className="songtext">List of Available Songs!</h1>
+        <h2 className="songsubtext">Feel Free to Add More!</h2>
         <div></div>
       </div>
       <div>
         <section>
-          <div>
+          <div className="songlist">
             {songs &&
               songs.map((mappedSong, idx) => {
                 return (
-                  <div>
-                    {mappedSong.artist.artistName} : {mappedSong.songName}
-                  </div>
+                  <>
+                    <a className="songdetails" href="/songdetails">
+                      {mappedSong.songName}
+                    </a>
+                  </>
                 );
               })}
           </div>

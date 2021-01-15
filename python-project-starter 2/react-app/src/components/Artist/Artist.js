@@ -16,17 +16,19 @@ function Artist({ user }) {
   return (
     <div>
       <div>
-        <h1>List of Available Artists!</h1>
-        <h2>Feel Free to Add More!</h2>
+        <h1 className="artisttext">List of Available Artists!</h1>
+        <h2 className="artistsubtext">Feel Free to Add More!</h2>
         <div></div>
       </div>
       <div>
         <section>
-          <div>
+          <div className="artistlist">
             {artist &&
               artist.map((mappedArtist, idx) => {
                 return (
-                  <div className="artistlist">{mappedArtist.artistName}</div>
+                  <a className="artistdetails" href="/artistdetails">
+                    {mappedArtist.artistName}
+                  </a>
                 );
               })}
           </div>

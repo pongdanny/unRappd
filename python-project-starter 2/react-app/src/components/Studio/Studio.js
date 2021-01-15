@@ -19,8 +19,14 @@ const Studio = ({ user }) => {
       <div>
         <h1>Check out the Recent Bumps!</h1>
         <h2>
-          user {user.username} is bumping{" "}
-          {checkins && checkins[0].song.songName}
+          user {checkins && checkins[0].user.username} is bumping{" "}
+          {checkins && checkins[0].song.songName} by{" "}
+          {checkins && checkins[0].artist.artistName}
+        </h2>
+        <h2>
+          user {checkins && checkins[1].user.username} is bumping{" "}
+          {checkins && checkins[1].song.songName} by{" "}
+          {checkins && checkins[1].artist.artistName}
         </h2>
         <a className="bumpsongbtn" href="/newcheckin">
           Bump a Song
@@ -34,8 +40,11 @@ const Studio = ({ user }) => {
                 return (
                   <div>
                     {" "}
-                    {mappedCheckin.song.songName} :{" "}
-                    {mappedCheckin.artist.artistName} : {mappedCheckin.review}
+                    user {mappedCheckin.user.username} is bumpin{" "}
+                    {mappedCheckin.song.songName} by{" "}
+                    {mappedCheckin.artist.artistName}, Here's their
+                    Review/Rating: {mappedCheckin.review},{" "}
+                    {mappedCheckin.rating}
                   </div>
                 );
               })}
