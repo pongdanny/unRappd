@@ -350,7 +350,7 @@
   }
 
   .lower-section a:hover {
-    border: 1px solid white;
+    border: 3px solid white;
     border-radius: 5px;
     background-color: white;
     color: black;

@@ -22,7 +22,9 @@ const Studio = ({ user }) => {
           user {user.username} is bumping{" "}
           {checkins && checkins[0].song.songName}
         </h2>
-        <button>Bump a Song</button>
+        <a className="bumpsongbtn" href="/newcheckin">
+          Bump a Song
+        </a>
       </div>
       <div>
         <section>

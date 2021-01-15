@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { createSong } from "../../services/song";
-// import "./NewSong.css";
+import "./NewSong.css";
 
 const SongForm = ({ user }) => {
   const [artistId, setArtistId] = useState("");
@@ -31,8 +31,13 @@ const SongForm = ({ user }) => {
 
   return (
     <>
+      <img
+        className="songimg"
+        src="https://cdn.pixabay.com/photo/2014/05/22/21/46/mixing-desk-351478_960_720.jpg"
+      ></img>
+      <div className="addnewsong">Add a New Song! 🎵</div>
       <form className="newSongForm">
-        <div className="artistContainer">
+        <div className="songcontainer">
           <label className="artistId">Artist ID</label>
           <input
             name="artistId"
@@ -54,9 +59,11 @@ const SongForm = ({ user }) => {
             value={albumName}
             onChange={updateAlbumName}
           />
+          <button className="songsubmit" onClick={newSongSubmit}>
+            Submit
+          </button>
         </div>
       </form>
-      <button onClick={newSongSubmit}>Submit</button>
     </>
   );
 };

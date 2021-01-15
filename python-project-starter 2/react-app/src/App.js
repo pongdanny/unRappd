@@ -14,6 +14,7 @@ import Artist from "./components/Artist/Artist";
 import Studio from "./components/Studio/Studio";
 import ArtistForm from "./components/NewArtist/NewArtist";
 import SongForm from "./components/NewSong/NewSong";
+import CheckinForm from "./components/CheckinForm/CheckinForm";
 import Home from "./components/Home/Home";
 
 function App() {
@@ -81,6 +82,13 @@ function App() {
       <ProtectedRoute path="/" exact={true} authenticated={authenticated}>
         <Home />
         {/* <h1>Bump Socially</h1> */}
+      </ProtectedRoute>
+      <ProtectedRoute
+        path="/newcheckin"
+        exact={true}
+        authenticated={authenticated}
+      >
+        <CheckinForm user={user} />
       </ProtectedRoute>
       <ProtectedRoute
         path="/newartist"
