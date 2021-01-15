@@ -33,7 +33,7 @@ const SongForm = ({ user }) => {
     <>
       <img
         className="songimg"
-        src="https://cdn.pixabay.com/photo/2014/05/22/21/46/mixing-desk-351478_960_720.jpg"
+        src="https://cdn.pixabay.com/photo/2017/08/28/18/56/microphone-2690877_960_720.jpg"
       ></img>
       <div className="addnewsong">Add a New Song! 🎵</div>
       <form className="newSongForm">
