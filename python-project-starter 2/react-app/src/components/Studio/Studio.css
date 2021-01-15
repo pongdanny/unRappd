@@ -1,0 +1,30 @@
+.checkinlist {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px;
+  align-items: center;
+}
+
+.checkindetails {
+  text-decoration: none;
+  color: green;
+  padding-top: 30px;
+}
+
+.checkintext {
+  padding-left: 500px;
+}
+
+.checkinsubtext {
+  padding-left: 600px;
+}
+
+.bumpsongbtn {
+  text-decoration: none;
+  color: black;
+  padding-left: 650px;
+}
+
+.bumpsongbtn:hover {
+  font-weight: bolder;
+}

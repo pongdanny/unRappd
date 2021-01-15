@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import "./Studio.css";
+import "./Studio.css";
 import { getCheckins } from "../../services/checkin";
 import { getSongs } from "../../services/song";
 import Song from "../Song/Song";
@@ -17,8 +17,8 @@ const Studio = ({ user }) => {
   return (
     <div>
       <div>
-        <h1>Check out the Recent Bumps!</h1>
-        <h2>
+        <h1 className="checkintext">Check out the Recent Bumps!</h1>
+        {/* <h2>
           user {checkins && checkins[0].user.username} is bumping{" "}
           {checkins && checkins[0].song.songName} by{" "}
           {checkins && checkins[0].artist.artistName}
@@ -27,20 +27,20 @@ const Studio = ({ user }) => {
           user {checkins && checkins[1].user.username} is bumping{" "}
           {checkins && checkins[1].song.songName} by{" "}
           {checkins && checkins[1].artist.artistName}
-        </h2>
-        <a className="bumpsongbtn" href="/newcheckin">
+        </h2> */}
+        <a href="/newcheckin" className="bumpsongbtn">
           Bump a Song
         </a>
       </div>
       <div>
         <section>
-          <div>
+          <div className="checkinlist">
             {checkins &&
               checkins.map((mappedCheckin, idx) => {
                 return (
-                  <div>
+                  <div className="checkindetails" href="/checkindetails">
                     {" "}
-                    user {mappedCheckin.user.username} is bumpin{" "}
+                    User {mappedCheckin.user.username} is bumping{" "}
                     {mappedCheckin.song.songName} by{" "}
                     {mappedCheckin.artist.artistName}, Here's their
                     Review/Rating: {mappedCheckin.review},{" "}
