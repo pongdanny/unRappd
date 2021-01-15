@@ -26,9 +26,7 @@ function Artist({ user }) {
             {artist &&
               artist.map((mappedArtist, idx) => {
                 return (
-                  <div>
-                    {idx + 1} : {mappedArtist.artistName}
-                  </div>
+                  <div className="artistlist">{mappedArtist.artistName}</div>
                 );
               })}
           </div>
