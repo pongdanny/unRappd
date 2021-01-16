@@ -5,26 +5,56 @@
   align-items: center;
 }
 
-.checkindetails {
-  text-decoration: none;
-  color: green;
-  padding-top: 30px;
-}
-
-.checkintext {
-  padding-left: 500px;
-}
-
-.checkinsubtext {
-  padding-left: 600px;
-}
-
 .bumpsongbtn {
   text-decoration: none;
-  color: black;
-  padding-left: 650px;
+  color: white;
+  position: absolute;
+  top: 275px;
+  left: 660px;
 }
 
 .bumpsongbtn:hover {
   font-weight: bolder;
+  background-color: grey;
+  border: 3px solid grey;
+  border-radius: 5px;
+}
+
+.checkindetails {
+  color: yellow;
+  padding-top: 40px;
+  padding-bottom: 25px;
+  padding-right: 25px;
+}
+
+.checkintext {
+  position: absolute;
+  top: 175px;
+  left: 500px;
+  font-weight: bold;
+  color: white;
+}
+
+.checkinlistcontainer {
+  /* background-color: white;
+  height: 145px;
+  width: 181px;
+  border-radius: 5px;
+  border: 5px solid white; */
+  position: absolute;
+  bottom: -50px;
+  left: 150px;
+  font-size: 20px;
+}
+
+.checkinlistcontainer:hover {
+  font-weight: bold;
+}
+
+.checkinlistimg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  filter: brightness(0.6);
 }

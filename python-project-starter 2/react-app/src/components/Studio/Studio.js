@@ -16,9 +16,12 @@ const Studio = ({ user }) => {
 
   return (
     <div>
-      <div>
-        <h1 className="checkintext">Check out the Recent Bumps!</h1>
-        {/* <h2>
+      <img
+        className="checkinlistimg"
+        src="https://cdn.pixabay.com/photo/2018/01/16/10/18/headphone-3085681_960_720.jpg"
+      ></img>
+      <h1 className="checkintext">Check out the Recent Bumps!</h1>
+      {/* <h2>
           user {checkins && checkins[0].user.username} is bumping{" "}
           {checkins && checkins[0].song.songName} by{" "}
           {checkins && checkins[0].artist.artistName}
@@ -28,26 +31,28 @@ const Studio = ({ user }) => {
           {checkins && checkins[1].song.songName} by{" "}
           {checkins && checkins[1].artist.artistName}
         </h2> */}
-        <a href="/newcheckin" className="bumpsongbtn">
-          Bump a Song
-        </a>
-      </div>
+      <a href="/newcheckin" className="bumpsongbtn">
+        Bump a Song
+      </a>
+
       <div>
         <section>
-          <div className="checkinlist">
-            {checkins &&
-              checkins.map((mappedCheckin, idx) => {
-                return (
-                  <div className="checkindetails" href="/checkindetails">
-                    {" "}
-                    User {mappedCheckin.user.username} is bumping{" "}
-                    {mappedCheckin.song.songName} by{" "}
-                    {mappedCheckin.artist.artistName}, Here's their
-                    Review/Rating: {mappedCheckin.review},{" "}
-                    {mappedCheckin.rating}
-                  </div>
-                );
-              })}
+          <div className="checkinlistcontainer">
+            <div className="checkinlist">
+              {checkins &&
+                checkins.map((mappedCheckin, idx) => {
+                  return (
+                    <div className="checkindetails" href="/checkindetails">
+                      {" "}
+                      User {mappedCheckin.user.username} is bumping{" "}
+                      {mappedCheckin.song.songName} by{" "}
+                      {mappedCheckin.artist.artistName}, Here's their
+                      Review/Rating: {mappedCheckin.review},{" "}
+                      {mappedCheckin.rating}
+                    </div>
+                  );
+                })}
+            </div>
           </div>
         </section>
       </div>
