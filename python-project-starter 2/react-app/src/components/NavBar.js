@@ -65,7 +65,7 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
             }}
             placeholder="Looking For Something? Search Here!"
           ></input>
-          <div className="linkcontainer">
+          {/* <div className="linkcontainer">
             <div className="github">
               <a href="https://github.com/pongdanny">Github</a>
             </div>
@@ -75,7 +75,7 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
             <div className="angellist">
               <a href="https://angel.co/u/dannypong">AngelList</a>
             </div>
-          </div>
+          </div> */}
           {authenticated ? (
             <>
               <div className="user-container">
