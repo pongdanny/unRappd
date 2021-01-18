@@ -22,7 +22,7 @@ const CheckinForm = ({ user }) => {
     e.preventDefault();
     // const newCheckin = await createCheckin(songNames, review, rating);
     const data = new FormData();
-    data.append("songName", songNames);
+    data.append("songNames", songNames);
     data.append("review", review);
     data.append("rating", rating);
     const checkin = await createCheckin(data);
