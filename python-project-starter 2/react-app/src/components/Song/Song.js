@@ -9,7 +9,7 @@ function Song({ user }) {
     (async () => {
       const res = await getSongs(user);
       console.log("song", res);
-      setSongs(res.songs);
+      setSongs(res);
     })();
   }, [user]);
 

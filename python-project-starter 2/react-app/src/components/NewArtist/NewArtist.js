@@ -3,8 +3,8 @@ import { createArtist } from "../../services/artist";
 import "./NewArtist.css";
 
 const ArtistForm = ({ user }) => {
-  const [userId, setUserId] = useState("");
-  const [songId, setSongId] = useState("");
+  // const [userId, setUserId] = useState("");
+  // const [songId, setSongId] = useState("");
   const [artistName, setArtistName] = useState("");
   const [description, setDescription] = useState("");
 
@@ -12,13 +12,13 @@ const ArtistForm = ({ user }) => {
     (async () => {})();
   }, [user]);
 
-  const updateUserId = (e) => {
-    setUserId(e.target.value);
-  };
+  // const updateUserId = (e) => {
+  //   setUserId(e.target.value);
+  // };
 
-  const updateSongId = (e) => {
-    setSongId(e.target.value);
-  };
+  // const updateSongId = (e) => {
+  //   setSongId(e.target.value);
+  // };
 
   const updateArtistName = (e) => {
     setArtistName(e.target.value);
@@ -31,8 +31,8 @@ const ArtistForm = ({ user }) => {
   const newArtistSubmit = async (e) => {
     e.preventDefault();
     const newArtist = await createArtist(
-      userId,
-      songId,
+      // userId,
+      // songId,
       artistName,
       description
     );
@@ -48,7 +48,7 @@ const ArtistForm = ({ user }) => {
       <div className="addnewartist">Add a New Artist! 🎤</div>
       <form className="newArtistForm">
         <div className="artistcontainer">
-          <label className="userId">User ID</label>
+          {/* <label className="userId">User ID</label>
           <input
             name="userId"
             placeholder="Add User ID"
@@ -61,7 +61,7 @@ const ArtistForm = ({ user }) => {
             placeholder="Add Song ID"
             value={songId}
             onChange={updateSongId}
-          />
+          /> */}
           <label className="artistName">Artist Name</label>
           <input
             name="artistName"

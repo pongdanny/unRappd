@@ -14,4 +14,11 @@ class Song(db.Model):
     checkins = db.relationship("Checkin", back_populates="song")
 
     def to_dict(self):
-        return {"id": self.id, "artistId": self.artistId, "songName": self.songName, "artist": self.artist.to_dict(), "albumName": self.albumName}
+        return {
+          "id": self.id,
+          "artistId": self.artistId,
+          "songName": self.songName,
+          "artist": self.artist.to_dict(),
+          "albumName": self.albumName,
+          # "user": self.user.to_dict()
+          }

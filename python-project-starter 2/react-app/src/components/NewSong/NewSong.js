@@ -3,7 +3,7 @@ import { createSong } from "../../services/song";
 import "./NewSong.css";
 
 const SongForm = ({ user }) => {
-  const [artistId, setArtistId] = useState("");
+  const [artistName, setArtistName] = useState("");
   const [songName, setSongName] = useState("");
   const [albumName, setAlbumName] = useState("");
 
@@ -11,8 +11,8 @@ const SongForm = ({ user }) => {
     (async () => {})();
   }, [user]);
 
-  const updateArtistId = (e) => {
-    setArtistId(e.target.value);
+  const updateArtistName = (e) => {
+    setArtistName(e.target.value);
   };
 
   const updateSongName = (e) => {
@@ -25,7 +25,7 @@ const SongForm = ({ user }) => {
 
   const newSongSubmit = async (e) => {
     e.preventDefault();
-    const newSong = await createSong(artistId, songName, albumName);
+    const newSong = await createSong(artistName, songName, albumName);
     return newSong;
   };
 
@@ -38,12 +38,12 @@ const SongForm = ({ user }) => {
       <div className="addnewsong">Add a New Song! 🎵</div>
       <form className="newSongForm">
         <div className="songcontainer">
-          <label className="artistId">Artist ID</label>
+          <label className="artistName">Artist Name</label>
           <input
-            name="artistId"
-            placeholder="Add Artist ID"
-            value={artistId}
-            onChange={updateArtistId}
+            name="artistName"
+            placeholder="Add Artist Name"
+            value={artistName}
+            onChange={updateArtistName}
           />
           <label className="songName">Song Name</label>
           <input

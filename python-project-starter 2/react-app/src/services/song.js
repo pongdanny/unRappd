@@ -1,6 +1,8 @@
 export const getSongs = async () => {
   const response = await fetch("/api/songs/");
-  return await response.json();
+  // return await response.json();
+  const songs = await response.json();
+  return songs.songs;
 };
 
 export const getSong = async (id) => {

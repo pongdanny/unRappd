@@ -4,17 +4,18 @@ import { useHistory } from "react-router-dom";
 import "./CheckinForm.css";
 import { getSongs } from "../../services/song";
 
-const CheckinForm = ({ user }) => {
+const CheckinForm = () => {
   const [errors, setErrors] = useState([]);
   const [songNames, setSongNames] = useState("");
   const [review, setReview] = useState("");
   const [rating, setRating] = useState("");
   useEffect(() => {
     (async () => {
-      const res = await getSongs(user);
-      setSongNames(res.songNames);
+      const res = await getSongs();
+      console.log(res);
+      setSongNames(res);
     })();
-  }, [user]);
+  }, []);
   let history = useHistory();
 
   const newCheckinSubmit = async (e) => {
@@ -77,8 +78,8 @@ const CheckinForm = ({ user }) => {
             <option value={null}>Choose a Song</option>
             {songNames &&
               songNames.map((songName) => (
-                <option value={songName.song.songName}>
-                  {songName.song.songName}
+                <option key={songName.id} value={songName.id}>
+                  {songName.songName}
                 </option>
               ))}
           </select>
