@@ -48,13 +48,13 @@ const Studio = ({ user }) => {
                           {" "}
                           {mappedCheckin.user.username} is bumpin{" "}
                           {mappedCheckin.song.songName} by{" "}
-                          {mappedCheckin.artist.artistName},
+                          {mappedCheckin.artist.artistName}
                         </div>
                         <div className="checkindetails">
-                          Review: {mappedCheckin.review}
+                          Review: "{mappedCheckin.review}"
                         </div>
                         <div className="checkindetails">
-                          Rating: {mappedCheckin.rating}
+                          Rating[1-5]: {mappedCheckin.rating} Stars
                         </div>
                         {/* <button className="editbtn">Edit</button>
                         <button className="deletebtn">Delete</button> */}
