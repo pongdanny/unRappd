@@ -69,3 +69,15 @@
   position: relative;
   filter: brightness(0.6);
 }
+
+.editbtn {
+  margin-left: 690px;
+  top: 85px;
+  position: relative;
+}
+
+.deletebtn {
+  margin-left: 795px;
+  top: 85px;
+  position: relative;
+}

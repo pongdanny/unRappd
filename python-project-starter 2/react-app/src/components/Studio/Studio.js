@@ -56,6 +56,8 @@ const Studio = ({ user }) => {
                         <div className="checkindetails">
                           Rating: {mappedCheckin.rating}
                         </div>
+                        {/* <button className="editbtn">Edit</button>
+                        <button className="deletebtn">Delete</button> */}
                       </div>
                     </>
                   );
