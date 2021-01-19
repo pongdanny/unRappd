@@ -8,14 +8,15 @@ export const getCheckins = async (id) => {
   }
 };
 
-export const createCheckin = async (songId, review, rating) => {
-  const response = await fetch(`/api/users/{userId}/checkins/`, {
+export const createCheckin = async (userId, songName, review, rating) => {
+  const response = await fetch(`/api/users/${userId}/checkins/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      songId,
+      userId,
+      songName,
       review,
       rating,
     }),

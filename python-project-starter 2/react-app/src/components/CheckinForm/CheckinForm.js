@@ -122,7 +122,11 @@ const CheckinForm = () => {
             value={rating}
             onChange={updateReview}
           />
-          <button className="checkinsubmit" onClick={newCheckinSubmit}>
+          <button
+            className="checkinsubmit"
+            type="button"
+            onClick={newCheckinSubmit}
+          >
             Submit
           </button>
         </div>

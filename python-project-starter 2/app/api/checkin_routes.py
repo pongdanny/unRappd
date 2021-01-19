@@ -54,9 +54,9 @@ def new_checkin():
 
     if form.validate_on_submit():
         checkin = Checkin(
-            user_id=form.data["userId"],
-            songId=form.data["songId"],
-            artistId=form.data["artistId"],
+            username=form.data["username"],
+            songName=form.data["songName"],
+            artistName=form.data["artistName"],
             review=form.data["review"],
             rating=form.data["rating"]
         )
