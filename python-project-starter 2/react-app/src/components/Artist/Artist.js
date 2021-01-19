@@ -19,8 +19,10 @@ function Artist({ user }) {
         className="artistlistimg"
         src="https://cdn.pixabay.com/photo/2017/11/22/00/24/rapper-2969498_960_720.jpg"
       ></img>
-      <h1 className="artisttext">List of Available Artists</h1>
-      <h2 className="artistsubtext">Feel Free to Add More!</h2>
+      <h1 className="artisttext">Available Artists</h1>
+      <a href="/newartist" className="artistsubtext">
+        Don't See Your Artist? Add Them!
+      </a>
       <section>
         <div className="artistlistcontainer">
           <div className="artistlist">

@@ -20,17 +20,24 @@
 .artisttext {
   position: absolute;
   top: 175px;
-  left: 540px;
+  left: 585px;
   font-weight: bold;
   color: white;
 }
 
 .artistsubtext {
   position: absolute;
-  top: 230px;
-  left: 580px;
+  top: 260px;
+  left: 575px;
   font-weight: bold;
   color: white;
+}
+
+.artistsubtext:hover {
+  text-decoration: none;
+  background: black;
+  border: 3px solid black;
+  border-radius: 5px;
 }
 
 .artistlistcontainer {
@@ -44,10 +51,10 @@
   left: 580px;
   font-size: 20px;
 }
-
+/* 
 .artistlistcontainer:hover {
   font-weight: bold;
-}
+} */
 
 .artistlistimg {
   width: 100%;

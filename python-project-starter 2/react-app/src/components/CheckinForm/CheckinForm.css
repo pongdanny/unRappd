@@ -8,13 +8,13 @@
   /* align-items: center; */
   padding-left: 585px;
   position: absolute;
-  top: 375px;
+  top: 435px;
 }
 
 .addnewcheckin {
   position: absolute;
-  top: 250px;
-  padding-left: 550px;
+  top: 275px;
+  padding-left: 510px;
   font-size: 40px;
   font-weight: bold;
   color: white;

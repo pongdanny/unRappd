@@ -54,6 +54,7 @@ const Profile = ({ user }) => {
                 <div className="userdata">
                   <div>Hey {user.username}! </div>
                   <div className="email">{user.email}</div>
+                  <button className="editprofile">Edit Profile</button>
                 </div>
               </figure>
             </div>

@@ -55,7 +55,7 @@ const CheckinForm = () => {
         className="checkinimg"
         src="https://cdn.pixabay.com/photo/2016/03/30/05/41/music-1290087_960_720.jpg"
       ></img>
-      <div className="addnewsong">Add a New Bump! 🎵</div>
+      <div className="addnewcheckin">Add a New Bump! 🎵</div>
       <form
         onSubmit={newCheckinSubmit}
         encType="multipart/form-data"

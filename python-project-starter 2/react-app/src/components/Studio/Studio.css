@@ -15,9 +15,10 @@
 
 .bumpsongbtn:hover {
   font-weight: bolder;
-  background-color: grey;
-  border: 3px solid grey;
+  background-color: white;
+  border: 3px solid white;
   border-radius: 5px;
+  color: black;
 }
 
 .checkindetails {
@@ -57,9 +58,9 @@
   font-size: 20px;
 }
 
-.checkinlistcontainer:hover {
+/* .checkinlistcontainer:hover {
   font-weight: bold;
-}
+} */
 
 .checkinlistimg {
   width: 100%;

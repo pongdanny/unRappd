@@ -8,7 +8,7 @@
 .songdetails {
   text-decoration: none;
   color: black;
-  padding-top: 5px;
+  padding-top: 9px;
   padding-bottom: 5px;
   padding-right: 25px;
   padding-left: 25px;
@@ -25,17 +25,24 @@
 .songtext {
   position: absolute;
   top: 170px;
-  left: 550px;
+  left: 587px;
   font-weight: bold;
   color: white;
 }
 
 .songsubtext {
   position: absolute;
-  top: 220px;
-  left: 580px;
+  top: 240px;
+  left: 633px;
   font-weight: bold;
   color: white;
+}
+
+.songsubtext:hover {
+  text-decoration: none;
+  background: black;
+  border: 3px solid black;
+  border-radius: 5px;
 }
 
 /* .songpage {
@@ -49,14 +56,14 @@
   border-radius: 5px;
   border: 5px solid white; */
   position: absolute;
-  bottom: -215px;
+  bottom: -265px;
   left: 580px;
   font-size: 20px;
 }
 
-.songlistcontainer:hover {
+/* .songlistcontainer:hover {
   font-weight: bold;
-}
+} */
 
 .songlistimg {
   width: 100%;
