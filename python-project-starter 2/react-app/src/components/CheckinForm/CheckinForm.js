@@ -67,7 +67,9 @@ const CheckinForm = () => {
               <div>{error}</div>
             ))}
           </div>
-          <label className="songName">Song Name</label>
+          <label htmlFor="songName" className="songName">
+            Song Name
+          </label>
           <select
             name="songName"
             type="text"

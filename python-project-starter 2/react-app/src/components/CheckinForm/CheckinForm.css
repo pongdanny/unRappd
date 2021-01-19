@@ -6,7 +6,7 @@
   width: 100px;
   /* justify-content: center; */
   /* align-items: center; */
-  padding-left: 630px;
+  padding-left: 585px;
   position: absolute;
   top: 375px;
 }
@@ -32,7 +32,7 @@
   position: absolute;
   padding-top: 1px;
   bottom: 103px;
-  left: 635px;
+  left: 592px;
 }
 
 .checkincontainer {
@@ -80,18 +80,19 @@
   transition: all 0.3s;
 }
 
-input:not(checked) ~ label:hover,
+/* input:not(checked) ~ label:hover,
 input:not(checked) ~ label:hover ~ label {
   background: -webkit-linear-gradient(90deg, #946a2e 0%, #e6ad5b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 25px;
-  /* color: #fd4; */
-}
+  font-size: 25px; */
+/* color: #fd4; */
+/* } */
 
+/* 
 input:checked ~ label {
   background: -webkit-linear-gradient(90deg, #946a2e 0%, #e6ad5b 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  /* color: #fd4; */
-}
+  -webkit-text-fill-color: transparent; */
+/* color: #fd4; */
+/* } */

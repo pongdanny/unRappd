@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify, session, request
 from app.models import Song, db
 from sqlalchemy.orm import selectinload
-from app.forms import song_form
+from app.forms import SongForm
 
 song_routes = Blueprint('songs', __name__)
 
@@ -40,8 +40,8 @@ def delete_song(id):
 
 
 @song_routes.route("/", methods=["POST"])
-def new_song():
-    form = NewSong()
+def song():
+    form = SongForm()
     form['csrf_token'].data = request.cookies['csrf_token']
 
     for key in dict.keys(form.data):
@@ -50,19 +50,19 @@ def new_song():
 
     if form.validate_on_submit():
         song = Song(
-            artistId=form.data["artistId"],
+            artistName=form.data["artistName"],
             songName=form.data["songName"],
             albumName=form.data["albumName"],
         )
         db.session.add(song)
         db.session.commit()
 
-        print(song.id)
+        # print(song.id)
 
-        db.session.add(song)
-        db.session.commit()
+        # db.session.add(song)
+        # db.session.commit()
 
-        return song.to_dict()
+        # return song.to_dict()
 
         return song.to_dict()
     return {'errors': validator_errors_to_error_messages(form.errors)}
