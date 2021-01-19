@@ -42,14 +42,22 @@ const Studio = ({ user }) => {
               {checkins &&
                 checkins.map((mappedCheckin, idx) => {
                   return (
-                    <div className="checkindetails" href="/checkindetails">
-                      {" "}
-                      {mappedCheckin.user.username} is bumping{" "}
-                      {mappedCheckin.song.songName} by{" "}
-                      {mappedCheckin.artist.artistName}, Here's their
-                      Review/Rating: {mappedCheckin.review},{" "}
-                      {mappedCheckin.rating}
-                    </div>
+                    <>
+                      <div className="checkindetailcontainer">
+                        <div className="checkindetails" href="/checkindetails">
+                          {" "}
+                          {mappedCheckin.user.username} is bumping{" "}
+                          {mappedCheckin.song.songName} by{" "}
+                          {mappedCheckin.artist.artistName},
+                        </div>
+                        <div className="checkindetails">
+                          Review: {mappedCheckin.review}
+                        </div>
+                        <div className="checkindetails">
+                          Rating: {mappedCheckin.rating}
+                        </div>
+                      </div>
+                    </>
                   );
                 })}
             </div>

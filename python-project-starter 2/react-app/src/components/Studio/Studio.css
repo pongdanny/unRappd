@@ -21,10 +21,20 @@
 }
 
 .checkindetails {
-  color: yellow;
-  padding-top: 40px;
-  padding-bottom: 25px;
+  color: black;
+  padding-top: 5px;
+  padding-bottom: 5px;
   padding-right: 25px;
+  padding-left: 25px;
+  background: white;
+  width: 500px;
+  margin-left: 310px;
+  border: 1px solid white;
+}
+
+.checkindetailcontainer {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .checkintext {
@@ -42,8 +52,8 @@
   border-radius: 5px;
   border: 5px solid white; */
   position: absolute;
-  bottom: -50px;
-  left: 150px;
+  bottom: -240px;
+  left: 135px;
   font-size: 20px;
 }
 

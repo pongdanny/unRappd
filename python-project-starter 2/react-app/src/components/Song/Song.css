@@ -10,6 +10,11 @@
   color: red;
   padding-top: 5px;
   padding-bottom: 5px;
+  padding-right: 25px;
+  padding-left: 25px;
+  border: 1px solid white;
+  background: white;
+  width: 200px;
 }
 
 .songtext {
@@ -36,7 +41,7 @@
   border: 5px solid white; */
   position: absolute;
   bottom: -175px;
-  left: 650px;
+  left: 632px;
   font-size: 20px;
 }
 
