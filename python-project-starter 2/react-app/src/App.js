@@ -91,6 +91,10 @@ function App() {
           <Home />
           {/* <h1>Bump Socially</h1> */}
         </Route>
+        <Route path="/login" exact={true} authenticated={authenticated}>
+          <Home />
+          {/* <h1>Bump Socially</h1> */}
+        </Route>
         <ProtectedRoute
           path="/newcheckin"
           exact={true}

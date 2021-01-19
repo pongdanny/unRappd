@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import LoginForm from "../auth/LoginForm";
 
 const Home = () => {
   return (
@@ -32,6 +33,7 @@ const Home = () => {
               </p>
             </div>
             <a className="letsgo" href="/checkins">
+              {" "}
               Let's Go!
             </a>
           </div>

@@ -83,21 +83,44 @@ const CheckinForm = () => {
                 </option>
               ))}
           </select>
-          <label className="review">Review</label>
-          <input
+          <label className="review"></label>
+          {/* <input
             name="review"
             type="text"
             placeholder="Add Review"
             value={review}
             onChange={updateReview}
-          />
-          <label className="rating">Rating</label>
+          /> */}
+          <div className="star-container">
+            <label htmlFor="content" className="star-widget">
+              Rating
+            </label>
+            <div className="review__stars">
+              <input
+                type="radio"
+                onClick={updateRating}
+                name="rate"
+                id="5"
+                defaultChecked
+              />
+              <label htmlFor="5" className="fas fa-star"></label>
+              <input type="radio" onClick={updateRating} name="rate" id="4" />
+              <label htmlFor="4" className="fas fa-star"></label>
+              <input type="radio" onClick={updateRating} name="rate" id="3" />
+              <label htmlFor="3" className="fas fa-star"></label>
+              <input type="radio" onClick={updateRating} name="rate" id="2" />
+              <label htmlFor="2" className="fas fa-star"></label>
+              <input type="radio" onClick={updateRating} name="rate" id="1" />
+              <label htmlFor="1" className="fas fa-star"></label>
+            </div>
+          </div>
+          <label className="rating">Review </label>
           <input
-            name="rating"
+            name="review"
             type="text"
-            placeholder="Add Rating"
+            placeholder="Add Review"
             value={rating}
-            onChange={updateRating}
+            onChange={updateReview}
           />
           <button className="checkinsubmit" onClick={newCheckinSubmit}>
             Submit

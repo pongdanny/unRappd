@@ -31,14 +31,67 @@
 .checkinsubmit {
   position: absolute;
   padding-top: 1px;
-  bottom: 43px;
+  bottom: 103px;
   left: 635px;
 }
 
 .checkincontainer {
   background-color: white;
-  height: 230px;
-  width: 181px;
+  height: 170px;
+  width: 220px;
   border-radius: 5px;
   border: 5px solid white;
+}
+
+.star-container {
+  display: flex;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+.star-widget {
+  height: 29px;
+  font-size: 16px;
+  font-weight: 500;
+  padding-top: 9px;
+  /* background-color: aqua; */
+}
+
+.review__stars {
+  width: 170px;
+  height: 29px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+.review__stars input {
+  /* display: none; */
+}
+
+.review__stars label {
+  font-size: 22px;
+  background: -webkit-linear-gradient(90deg, #444 0%, #262630 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: 2px;
+  transition: all 0.3s;
+}
+
+input:not(checked) ~ label:hover,
+input:not(checked) ~ label:hover ~ label {
+  background: -webkit-linear-gradient(90deg, #946a2e 0%, #e6ad5b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 25px;
+  /* color: #fd4; */
+}
+
+input:checked ~ label {
+  background: -webkit-linear-gradient(90deg, #946a2e 0%, #e6ad5b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* color: #fd4; */
 }

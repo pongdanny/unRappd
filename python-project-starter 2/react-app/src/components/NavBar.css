@@ -371,6 +371,10 @@
     margin-left: 15px;
   }
 
+  .login-container button:hover {
+    cursor: pointer;
+  }
+
   .login-container button {
     color: white;
     text-decoration: none;
