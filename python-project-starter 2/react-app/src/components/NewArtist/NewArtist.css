@@ -6,15 +6,15 @@
   width: 100px;
   /* justify-content: center; */
   /* align-items: center; */
-  padding-left: 630px;
+  padding-left: 600px;
   position: absolute;
-  top: 375px;
+  top: 475px;
 }
 
 .addnewartist {
   position: absolute;
-  top: 250px;
-  padding-left: 550px;
+  top: 300px;
+  padding-left: 520px;
   font-size: 40px;
   font-weight: bold;
   color: white;
