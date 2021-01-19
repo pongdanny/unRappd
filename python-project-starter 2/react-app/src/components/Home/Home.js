@@ -28,7 +28,7 @@ const Home = () => {
                 </strong>
               </p>
               <p>
-                <em>Bump Casually.</em>
+                <em>Bump Socially.</em>
               </p>
             </div>
             <a className="letsgo" href="/checkins">

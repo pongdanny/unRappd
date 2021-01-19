@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 // import LoginForm from "./components/auth/LoginForm";
 // import SignUpForm from "./components/auth/SignUpForm";
 import NavBar from "./components/NavBar";
@@ -39,73 +39,83 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
-      <NavBar
-        setAuthenticated={setAuthenticated}
-        authenticated={authenticated}
-        // setResults={setResults}
-      />
-      <ProtectedRoute
-        path="/profile"
-        exact={true}
-        authenticated={authenticated}
-      >
-        <Profile user={user} />
-      </ProtectedRoute>
-      {/* <ProtectedRoute path="/users" exact={true} authenticated={authenticated}>
+    <>
+      <BrowserRouter>
+        <NavBar
+          setAuthenticated={setAuthenticated}
+          authenticated={authenticated}
+          // setResults={setResults}
+        />
+        {/* <Route>
+          <Home />
+        </Route> */}
+        <ProtectedRoute
+          path="/profile"
+          exact={true}
+          authenticated={authenticated}
+        >
+          <Profile user={user} />
+        </ProtectedRoute>
+        {/* <ProtectedRoute path="/users" exact={true} authenticated={authenticated}>
         <UsersList />
       </ProtectedRoute> */}
-      <ProtectedRoute
-        path="/users/:userId"
-        exact={true}
-        authenticated={authenticated}
-      >
-        <User />
-      </ProtectedRoute>
-      <ProtectedRoute
-        path="/checkins"
-        exact={true}
-        authenticated={authenticated}
-      >
-        <Studio user={user} />
-      </ProtectedRoute>
-      <ProtectedRoute path="/songs" exact={true} authenticated={authenticated}>
-        <Song user={user} />
-      </ProtectedRoute>
-      <ProtectedRoute
-        path="/artists"
-        exact={true}
-        authenticated={authenticated}
-      >
-        <Artist user={user} />
-      </ProtectedRoute>
-      <ProtectedRoute path="/" exact={true} authenticated={authenticated}>
-        <Home />
-        {/* <h1>Bump Socially</h1> */}
-      </ProtectedRoute>
-      <ProtectedRoute
-        path="/newcheckin"
-        exact={true}
-        authenticated={authenticated}
-      >
-        <CheckinForm user={user} />
-      </ProtectedRoute>
-      <ProtectedRoute
-        path="/newartist"
-        exact={true}
-        authenticated={authenticated}
-      >
-        <ArtistForm user={user} />
-      </ProtectedRoute>
-      <ProtectedRoute
-        path="/newsong"
-        exact={true}
-        authenticated={authenticated}
-      >
-        <SongForm user={user} />
-      </ProtectedRoute>
-      <Footer />
-    </BrowserRouter>
+        <ProtectedRoute
+          path="/users/:userId"
+          exact={true}
+          authenticated={authenticated}
+        >
+          <User />
+        </ProtectedRoute>
+        <ProtectedRoute
+          path="/checkins"
+          exact={true}
+          authenticated={authenticated}
+        >
+          <Studio user={user} />
+        </ProtectedRoute>
+        <ProtectedRoute
+          path="/songs"
+          exact={true}
+          authenticated={authenticated}
+        >
+          <Song user={user} />
+        </ProtectedRoute>
+        <ProtectedRoute
+          path="/artists"
+          exact={true}
+          authenticated={authenticated}
+        >
+          <Artist user={user} />
+        </ProtectedRoute>
+        <Route path="/" exact={true} authenticated={authenticated}>
+          <Home />
+          {/* <h1>Bump Socially</h1> */}
+        </Route>
+        <ProtectedRoute
+          path="/newcheckin"
+          exact={true}
+          authenticated={authenticated}
+        >
+          <CheckinForm user={user} />
+        </ProtectedRoute>
+        <ProtectedRoute
+          path="/newartist"
+          exact={true}
+          authenticated={authenticated}
+        >
+          <ArtistForm user={user} />
+        </ProtectedRoute>
+        <ProtectedRoute
+          path="/newsong"
+          exact={true}
+          authenticated={authenticated}
+        >
+          <SongForm user={user} />
+        </ProtectedRoute>
+
+        <Footer />
+      </BrowserRouter>
+    </>
   );
 }
 

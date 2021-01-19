@@ -27,6 +27,10 @@ const Profile = ({ user }) => {
         </div>
       </div> */}
       <div className="page">
+        <img
+          id="hero-image"
+          src="https://cdn.pixabay.com/photo/2019/09/27/07/57/music-4507819_960_720.jpg"
+        />
         <div className="profile">
           <div className="profile-background"></div>
           <div className="profile-contents">

@@ -50,10 +50,11 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
           <li className="nav navbar-item">
             <NavLink to="/" exact={true} className="unrappd">
               <div>&nbsp; &nbsp;UNRAPPD</div>
+              <div className="unrappdsub">Bump Socially.</div>
               {/* <img className="logo" alt="unrappd logo" src=""></img> */}
             </NavLink>
           </li>
-          <input
+          {/* <input
             className="searchbar"
             type="text"
             value={search}
@@ -64,7 +65,7 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
               }
             }}
             placeholder="Looking For Something? Search Here!"
-          ></input>
+          ></input> */}
           {/* <div className="linkcontainer">
             <div className="github">
               <a href="https://github.com/pongdanny">Github</a>

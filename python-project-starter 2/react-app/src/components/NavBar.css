@@ -205,6 +205,12 @@
     font-size: 40px;
   }
 
+  .unrappdsub {
+    font-size: 18px;
+    margin-left: 82px;
+    font-weight: bold;
+  }
+
   .navbar-items {
     justify-content: space-between;
     align-items: center;
