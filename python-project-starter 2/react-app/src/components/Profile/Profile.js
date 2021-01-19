@@ -65,7 +65,7 @@ const Profile = ({ user }) => {
               </div>
 
               <div className="profile-info-data">
-                <div className="profile-info-data__number">7</div>
+                <div className="profile-info-data__number">0</div>
                 <div className="profile-info-data__name">Following</div>
               </div>
             </div>

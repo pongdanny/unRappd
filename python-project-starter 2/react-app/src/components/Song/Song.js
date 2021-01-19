@@ -17,7 +17,7 @@ function Song({ user }) {
     <div className="songpage">
       <img
         className="songlistimg"
-        src="https://cdn.pixabay.com/photo/2014/05/22/21/46/mixing-desk-351478_960_720.jpg"
+        src="https://images.unsplash.com/photo-1595491542937-3de00ac7e08a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80"
       ></img>
       <h1 className="songtext">Available Songs</h1>
       <a href="/newsong" className="songsubtext">

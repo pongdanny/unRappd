@@ -7,9 +7,9 @@
 
 .userdata {
   position: absolute;
-  margin-top: -380px;
+  margin-top: -400px;
   font-size: 20px;
-  margin-left: -15px;
+  margin-left: -5px;
   font-weight: bold;
 }
 
@@ -85,7 +85,7 @@ html {
   position: relative;
   top: -10rem;
   left: -11.4rem;
-  background-image: url("https://i.pinimg.com/originals/d5/0e/ef/d50eef95aba70982ffff8929b53af3d8.jpg?");
+  background-image: url("https://cdn.pixabay.com/photo/2017/07/18/23/23/user-2517433_960_720.png");
   background-size: 100% 100%;
   border-radius: 10px;
   /* position: absolute; */

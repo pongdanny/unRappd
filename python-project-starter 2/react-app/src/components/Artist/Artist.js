@@ -17,7 +17,7 @@ function Artist({ user }) {
     <div>
       <img
         className="artistlistimg"
-        src="https://cdn.pixabay.com/photo/2017/11/22/00/24/rapper-2969498_960_720.jpg"
+        src="https://images.unsplash.com/photo-1512090421650-1ba94830f7b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
       ></img>
       <h1 className="artisttext">Available Artists</h1>
       <a href="/newartist" className="artistsubtext">

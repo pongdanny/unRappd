@@ -18,7 +18,7 @@ const Studio = ({ user }) => {
     <div>
       <img
         className="checkinlistimg"
-        src="https://cdn.pixabay.com/photo/2018/01/16/10/18/headphone-3085681_960_720.jpg"
+        src="https://images.unsplash.com/photo-1568246605205-f8df0dde3c35?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
       ></img>
       <h1 className="checkintext">Check out the Recent Bumps!</h1>
       {/* <h2>
