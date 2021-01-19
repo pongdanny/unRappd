@@ -17,12 +17,11 @@ const Home = () => {
             <h1 id="hero-title">Welcome to UNRAPPD!</h1>
             <div id="hero-description">
               <p>
-                We Strive To Provide A Platform For Underground Hip Hop Artists
-                Who We Feel Should Earn The Spotlight!
-                {/* Rappers Come From All
-                Walks Of Life And Their Voices Deserve To Be Heard, Especially
-                The Ones Who've Got Real Stories To Tell. For Most Of These
-                Artists, Its Much Deeper Than Rap.. */}
+                We provide a platform for hip hop artists who we feel deserve
+                the spotlight! Rappers come from all walks of life and their
+                voices deserve to be heard, especially the ones who've got real
+                stories to tell. For most of these artists, its much deeper than
+                rap..
               </p>
               <p>
                 <strong>

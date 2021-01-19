@@ -46,7 +46,7 @@ const Studio = ({ user }) => {
                       <div className="checkindetailcontainer">
                         <div className="checkindetails" href="/checkindetails">
                           {" "}
-                          {mappedCheckin.user.username} is bumping{" "}
+                          {mappedCheckin.user.username} is bumpin{" "}
                           {mappedCheckin.song.songName} by{" "}
                           {mappedCheckin.artist.artistName},
                         </div>

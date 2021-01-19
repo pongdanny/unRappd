@@ -37,7 +37,7 @@ body {
   width: 100%;
   max-width: 700px;
   margin-top: 120px;
-  margin-left: 360px;
+  margin-left: 375px;
 }
 
 .content-shadow {
@@ -76,5 +76,9 @@ body {
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
-  color: darkgray;
+  color: grey;
+}
+
+.letsgo:hover {
+  color: springgreen;
 }
