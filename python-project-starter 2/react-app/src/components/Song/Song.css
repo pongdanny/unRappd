@@ -17,9 +17,14 @@
   width: 200px;
 }
 
+.songdetailcontainer {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 .songtext {
   position: absolute;
-  top: 150px;
+  top: 170px;
   left: 590px;
   font-weight: bold;
   color: white;
@@ -27,7 +32,7 @@
 
 .songsubtext {
   position: absolute;
-  top: 200px;
+  top: 220px;
   left: 630px;
   font-weight: bold;
   color: white;
@@ -40,7 +45,7 @@
   border-radius: 5px;
   border: 5px solid white; */
   position: absolute;
-  bottom: -175px;
+  bottom: -215px;
   left: 632px;
   font-size: 20px;
 }
