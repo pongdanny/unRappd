@@ -14,14 +14,14 @@ function Song({ user }) {
   }, [user]);
 
   return (
-    <div>
+    <div className="songpage">
       <img
         className="songlistimg"
         src="https://cdn.pixabay.com/photo/2014/05/22/21/46/mixing-desk-351478_960_720.jpg"
       ></img>
       <h1 className="songtext">List of Available Songs</h1>
       <h2 className="songsubtext">Feel Free to Add More!</h2>
-      <section>
+      <section className="songsection">
         <div className="songlistcontainer">
           <div className="songlist">
             {songs &&
