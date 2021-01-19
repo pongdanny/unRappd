@@ -20,7 +20,7 @@
 .artisttext {
   position: absolute;
   top: 175px;
-  left: 560px;
+  left: 540px;
   font-weight: bold;
   color: white;
 }
@@ -28,7 +28,7 @@
 .artistsubtext {
   position: absolute;
   top: 230px;
-  left: 600px;
+  left: 580px;
   font-weight: bold;
   color: white;
 }
@@ -41,7 +41,7 @@
   border: 5px solid white; */
   position: absolute;
   bottom: -100px;
-  left: 602px;
+  left: 580px;
   font-size: 20px;
 }
 

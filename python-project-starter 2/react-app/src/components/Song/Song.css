@@ -25,7 +25,7 @@
 .songtext {
   position: absolute;
   top: 170px;
-  left: 590px;
+  left: 550px;
   font-weight: bold;
   color: white;
 }
@@ -33,7 +33,7 @@
 .songsubtext {
   position: absolute;
   top: 220px;
-  left: 630px;
+  left: 580px;
   font-weight: bold;
   color: white;
 }
@@ -50,7 +50,7 @@
   border: 5px solid white; */
   position: absolute;
   bottom: -215px;
-  left: 632px;
+  left: 580px;
   font-size: 20px;
 }
 
