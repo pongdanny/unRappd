@@ -5,4 +5,4 @@
 
 
 ### Live Site: https://unrappd.herokuapp.com/
-### Check out the Wiki for Project Details!
+### **Check out the Wiki for Project Details!**
