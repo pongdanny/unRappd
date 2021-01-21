@@ -3,6 +3,7 @@ import { NavLink, useHistory } from "react-router-dom";
 import LogoutButton from "./auth/LogoutButton";
 import LoginForm from "./auth/LoginForm";
 import SignUpForm from "./auth/SignUpForm";
+import { map } from "lodash";
 import "./NavBar.css";
 
 const NavBar = ({ setAuthenticated, authenticated }) => {

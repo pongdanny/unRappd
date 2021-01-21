@@ -3,6 +3,7 @@ import { createCheckin, getCheckins } from "../../services/checkin";
 import { useHistory } from "react-router-dom";
 import "./CheckinForm.css";
 import { getSongs } from "../../services/song";
+import { map } from "lodash";
 
 const CheckinForm = () => {
   const [errors, setErrors] = useState([]);
