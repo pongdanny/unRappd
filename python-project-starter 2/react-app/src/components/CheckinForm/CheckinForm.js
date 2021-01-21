@@ -81,12 +81,17 @@ const CheckinForm = () => {
             onChange={updateSongName}
           >
             <option value={null}>Choose a Song</option>
-            {songNames &&
+            {map(songNames, (songName) => (
+              <option key={songName.id} value={songName.id}>
+                {songName.songName}
+              </option>
+            ))}
+            {/* {songNames &&
               songNames.map((songName) => (
                 <option key={songName.id} value={songName.id}>
                   {songName.songName}
                 </option>
-              ))}
+              ))} */}
           </select>
           <label className="review"></label>
           {/* <input
