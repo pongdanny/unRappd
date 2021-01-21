@@ -48,7 +48,7 @@ const CheckinForm = () => {
   const updateRating = (e) => {
     setRating(e.target.value);
   };
-
+  console.log(songNames);
   return (
     <>
       <img

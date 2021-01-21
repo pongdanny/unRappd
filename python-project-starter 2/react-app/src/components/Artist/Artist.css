@@ -31,13 +31,14 @@
   left: 575px;
   font-weight: bold;
   color: white;
+  text-decoration: none;
 }
 
 .artistsubtext:hover {
-  text-decoration: none;
-  background: black;
-  border: 3px solid black;
+  background: white;
+  border: 3px solid white;
   border-radius: 5px;
+  color: black;
 }
 
 .artistlistcontainer {
