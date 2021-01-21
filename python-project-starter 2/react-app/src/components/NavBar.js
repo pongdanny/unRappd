@@ -54,6 +54,7 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
               {/* <img className="logo" alt="unrappd logo" src=""></img> */}
             </NavLink>
           </li>
+          <div className="danny">Developed by Danny Pong</div>
           {/* <input
             className="searchbar"
             type="text"

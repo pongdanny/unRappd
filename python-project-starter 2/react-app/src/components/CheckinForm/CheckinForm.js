@@ -12,7 +12,7 @@ const CheckinForm = () => {
   useEffect(() => {
     (async () => {
       const res = await getSongs();
-      console.log(res);
+      // console.log(res);
       setSongNames(res);
     })();
   }, []);
@@ -48,7 +48,9 @@ const CheckinForm = () => {
   const updateRating = (e) => {
     setRating(e.target.value);
   };
-  console.log(songNames);
+
+  console.log("this works", songNames);
+
   return (
     <>
       <img

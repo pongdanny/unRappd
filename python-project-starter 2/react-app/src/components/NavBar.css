@@ -190,6 +190,14 @@
     display: flex;
   }
 
+  .danny {
+    position: absolute;
+    margin-top: -25px;
+    color: white;
+    margin-left: 565px;
+    font-size: 20px;
+  }
+
   .upper-section {
     width: 100%;
     min-width: 450px;
@@ -321,6 +329,7 @@
     height: 50px;
     width: 50px;
     margin-left: -9px;
+    margin-top: 15px;
   }
 
   .dropdown-content > button {
