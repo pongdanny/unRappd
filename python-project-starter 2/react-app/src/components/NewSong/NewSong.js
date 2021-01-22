@@ -32,10 +32,13 @@ const SongForm = ({ user }) => {
   return (
     <>
       <img
+        alt="songimg"
         className="songimg"
         src="https://images.unsplash.com/photo-1520717178299-4cf2701a5bc0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
       ></img>
-      <div className="addnewsong">Add a New Song! 🎵</div>
+      <div className="addnewsong">
+        Add a New Song! <span role="img">🎵</span>
+      </div>
       <form className="newSongForm">
         <div className="songcontainer">
           <label className="artistName">Artist Name</label>

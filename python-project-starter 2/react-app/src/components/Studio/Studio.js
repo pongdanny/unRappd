@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Studio.css";
 import { getCheckins } from "../../services/checkin";
-import { getSongs } from "../../services/song";
-import Song from "../Song/Song";
+// import { getSongs } from "../../services/song";
+// import Song from "../Song/Song";
 
 const Studio = ({ user }) => {
   const [checkins, setCheckins] = useState(null);
@@ -17,6 +17,7 @@ const Studio = ({ user }) => {
   return (
     <div>
       <img
+        alt="checkinlistimg"
         className="checkinlistimg"
         src="https://images.unsplash.com/photo-1568246605205-f8df0dde3c35?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
       ></img>

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { createCheckin, getCheckins } from "../../services/checkin";
+import { createCheckin } from "../../services/checkin";
 import { useHistory } from "react-router-dom";
 import "./CheckinForm.css";
 import { getSongs } from "../../services/song";
-import { map } from "lodash";
+// import { map } from "lodash";
 
 const CheckinForm = () => {
   const [errors, setErrors] = useState([]);
@@ -16,13 +16,13 @@ const CheckinForm = () => {
       const res = await getSongs();
       // console.log(res);
       setSongNames(res);
-      console.log(res);
+      // console.log(res);
     })();
   }, []);
   let history = useHistory();
 
   const newCheckinSubmit = async (e) => {
-    console.log("this works");
+    console.log("this works", checkin);
     e.preventDefault();
     // const newCheckin = await createCheckin(songNames, review, rating);
     const data = new FormData();
@@ -137,7 +137,7 @@ const CheckinForm = () => {
             name="review"
             type="text"
             placeholder="Add Review"
-            value={rating}
+            value={review}
             onChange={updateReview}
           />
           <button

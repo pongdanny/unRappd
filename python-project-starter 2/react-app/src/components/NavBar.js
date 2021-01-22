@@ -27,21 +27,21 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
     fetchAll();
   }, []);
 
-  const handleSubmit = () => {
-    const artistFilteredResults = data[0].filter((artist) =>
-      artist.name.toLowerCase().includes(search.toLowerCase())
-    );
-    const songFilteredResults = data[1].filter((song) =>
-      song.name.toLowerCase().includes(search.toLowerCase())
-    );
+  // const handleSubmit = () => {
+  //   const artistFilteredResults = data[0].filter((artist) =>
+  //     artist.name.toLowerCase().includes(search.toLowerCase())
+  //   );
+  //   const songFilteredResults = data[1].filter((song) =>
+  //     song.name.toLowerCase().includes(search.toLowerCase())
+  //   );
 
-    let artistsAndSongsFiltered = [];
-    artistsAndSongsFiltered.push(artistFilteredResults);
-    artistsAndSongsFiltered.push(songFilteredResults);
-    // setResults(artistsAndSongsFiltered);
-    setSearch("");
-    return history.push("/search");
-  };
+  //   let artistsAndSongsFiltered = [];
+  //   artistsAndSongsFiltered.push(artistFilteredResults);
+  //   artistsAndSongsFiltered.push(songFilteredResults);
+  // setResults(artistsAndSongsFiltered);
+  //   setSearch("");
+  //   return history.push("/search");
+  // };
 
   return (
     <nav className="nav navbar-container">
@@ -85,6 +85,7 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
                   <button className="dropbtn">
                     <a href="/profile" className="you-button">
                       <img
+                        alt="usericon"
                         className="usericon"
                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL4gjlRnYx_Syp-ktNGolRWqP0LXuVL4ddjg&usqp=CAU"
                       ></img>

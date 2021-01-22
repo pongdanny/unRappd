@@ -16,6 +16,7 @@ function Song({ user }) {
   return (
     <div className="songpage">
       <img
+        alt="songlistimg"
         className="songlistimg"
         src="https://images.unsplash.com/photo-1595491542937-3de00ac7e08a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80"
       ></img>
