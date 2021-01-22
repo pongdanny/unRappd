@@ -8,6 +8,7 @@ import { map } from "lodash";
 const CheckinForm = () => {
   const [errors, setErrors] = useState([]);
   const [songNames, setSongNames] = useState("");
+  const [songName, setSongName] = useState("");
   const [review, setReview] = useState("");
   const [rating, setRating] = useState("");
   useEffect(() => {
@@ -15,6 +16,7 @@ const CheckinForm = () => {
       const res = await getSongs();
       // console.log(res);
       setSongNames(res);
+      console.log(res);
     })();
   }, []);
   let history = useHistory();
@@ -39,7 +41,7 @@ const CheckinForm = () => {
   };
 
   const updateSongName = (e) => {
-    setSongNames(e.target.value);
+    setSongName(e.target.value);
   };
 
   const updateReview = (e) => {
@@ -77,21 +79,27 @@ const CheckinForm = () => {
             name="songName"
             type="text"
             placeholder="Add Song Name"
-            value={songNames}
+            value={songName}
             onChange={updateSongName}
           >
             <option value={null}>Choose a Song</option>
-            {map(songNames, (songName) => (
-              <option key={songName.id} value={songName.id}>
-                {songName.songName}
-              </option>
-            ))}
-            {/* {songNames &&
+            {/* {map(
+              songNames,
+              (songName) => (
+                (
+                  <option key={songName.id} value={songName.id}>
+                    {songName.songName}
+                  </option>
+                ),
+                console.log(songName.id)
+              )
+            )} */}
+            {songNames &&
               songNames.map((songName) => (
                 <option key={songName.id} value={songName.id}>
                   {songName.songName}
                 </option>
-              ))} */}
+              ))}
           </select>
           <label className="review"></label>
           {/* <input
@@ -134,8 +142,8 @@ const CheckinForm = () => {
           />
           <button
             className="checkinsubmit"
-            type="button"
-            onClick={newCheckinSubmit}
+            type="submit"
+            // onClick={newCheckinSubmit}
           >
             Submit
           </button>
