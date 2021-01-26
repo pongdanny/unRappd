@@ -82,6 +82,7 @@ const CheckinForm = () => {
             {/* I put the onChange handler on the surrounding div, here, so we don't have to repeat it on each input */}
             <div className="review__stars" onChange={(e) => setRating(e.target.value)}> 
               {[5, 4, 3, 2, 1].map((starRating) => (
+                <>
                 {/* Instead of repeating ourself at each rating score, we can map over the values that we allow as inputs. */}
                 <input
                   type="radio"
@@ -91,7 +92,8 @@ const CheckinForm = () => {
                   checked={rating === starRating} {/* Instead of specifying defaultChecked, dynamically check whichever is currently selected */}
                 />
                 <label htmlFor={`review__stars_${starRating}`} className="fas fa-star"></label>
-              ))};
+                </>
+              ))}
             </div>
           </div>
           <label className="rating">Review </label>

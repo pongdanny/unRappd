@@ -106,13 +106,6 @@ const CheckinForm = () => {
               ))}
           </select>
           <label className="review"></label>
-          {/* <input
-            name="review"
-            type="text"
-            placeholder="Add Review"
-            value={review}
-            onChange={updateReview}
-          /> */}
           <div className="star-container">
             <label htmlFor="content" className="star-widget">
               Rating
