@@ -8,6 +8,7 @@ class Artist(db.Model):
     userId = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
     artistName = db.Column(db.String)
     description = db.Column(db.String)
+    imgUrl = db.Column(db.String)
 
     user = db.relationship("User", back_populates="artists")
     songs = db.relationship("Song", back_populates="artist")
