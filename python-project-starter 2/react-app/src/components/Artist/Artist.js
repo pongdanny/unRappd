@@ -30,9 +30,9 @@ function Artist({ user }) {
             {artist &&
               artist.map((mappedArtist, idx) => {
                 return (
-                  <a className="artistdetails" href="/artistdetails">
-                    {mappedArtist.artistName}
-                  </a>
+                  <div className="artistdetails" href="/artistdetails">
+                    {mappedArtist.imgUrl} {mappedArtist.artistName}
+                  </div>
                 );
               })}
           </div>

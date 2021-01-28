@@ -20,5 +20,6 @@ class Artist(db.Model):
           "userId": self.userId,
           "artistName": self.artistName,
           "description": self.description,
-          "user": self.user.to_dict()
+          "user": self.user.to_dict(),
+          "imgUrl": self.imgUrl
         }
