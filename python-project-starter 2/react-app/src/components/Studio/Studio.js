@@ -6,6 +6,19 @@ import { getCheckins } from "../../services/checkin";
 
 const Studio = ({ user }) => {
   const [checkins, setCheckins] = useState(null);
+
+  const createStarRating = (rating) => {
+    let stars = [];
+    for (let i = 0; i < rating; i++) {
+      stars.push(
+        <>
+          <i key={`${i + 1}`} className="fa fa-star"></i>
+        </>
+      );
+    }
+    return stars;
+  };
+
   useEffect(() => {
     (async () => {
       const res = await getCheckins(user);
@@ -56,6 +69,9 @@ const Studio = ({ user }) => {
                         </div>
                         <div className="checkindetailsss">
                           Rating[1-5]: {mappedCheckin.rating}
+                        </div>
+                        <div className="rating-content">
+                          {createStarRating(mappedCheckin.rating)}
                         </div>
                         {/* <button className="editbtn">Edit</button>
                         <button className="deletebtn">Delete</button> */}

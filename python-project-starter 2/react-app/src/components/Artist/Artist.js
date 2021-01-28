@@ -14,7 +14,7 @@ function Artist({ user }) {
   }, [user]);
 
   return (
-    <div>
+    <div className="maincontainerartist">
       <img
         alt="artistlistimg"
         className="artistlistimg"
@@ -30,9 +30,18 @@ function Artist({ user }) {
             {artist &&
               artist.map((mappedArtist, idx) => {
                 return (
-                  <div className="artistdetails" href="/artistdetails">
-                    {mappedArtist.imgUrl} {mappedArtist.artistName}
-                  </div>
+                  <>
+                    <div className="urlcontainer">
+                      <img
+                        className="urlimages"
+                        src={mappedArtist.imgUrl}
+                        alt="artistalt"
+                      />
+                      <div className="artistdetails" href="/artistdetails">
+                        &nbsp;{mappedArtist.artistName}
+                      </div>
+                    </div>
+                  </>
                 );
               })}
           </div>

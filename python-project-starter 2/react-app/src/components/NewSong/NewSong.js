@@ -1,18 +1,40 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+
 import { createSong } from "../../services/song";
+import { getArtists } from "../../services/artist";
 import "./NewSong.css";
 
 const SongForm = ({ user }) => {
-  const [artistName, setArtistName] = useState("");
+  const [errors, setErrors] = useState([]);
+  const [artistNames, setArtistNames] = useState("");
+  const [artistId, setArtistId] = useState("");
   const [songName, setSongName] = useState("");
   const [albumName, setAlbumName] = useState("");
+  const history = useHistory();
 
   useEffect(() => {
-    (async () => {})();
-  }, [user]);
+    (async () => {
+      const res = await getArtists();
+      setArtistNames(res);
+      console.log(res);
+    })();
+  }, []);
 
-  const updateArtistName = (e) => {
-    setArtistName(e.target.value);
+  const newSongSubmit = async (e) => {
+    e.preventDefault();
+    const song = await createSong(artistId, songName, albumName);
+    if (!song.errors) {
+      console.log("Submit successful! ", song);
+      history.push("/");
+    } else {
+      setErrors(song.errors);
+      return;
+    }
+  };
+
+  const updateArtistId = (e) => {
+    setArtistId(e.target.value);
   };
 
   const updateSongName = (e) => {
@@ -21,12 +43,6 @@ const SongForm = ({ user }) => {
 
   const updateAlbumName = (e) => {
     setAlbumName(e.target.value);
-  };
-
-  const newSongSubmit = async (e) => {
-    e.preventDefault();
-    const newSong = await createSong(artistName, songName, albumName);
-    return newSong;
   };
 
   return (
@@ -39,15 +55,26 @@ const SongForm = ({ user }) => {
       <div className="addnewsong">
         Add a New Song! <span role="img">🎵</span>
       </div>
-      <form className="newSongForm">
+      <form className="newSongForm" onSubmit={newSongSubmit}>
         <div className="songcontainer">
-          <label className="artistName">Artist Name</label>
-          <input
+          <label htmlFor="artistName" className="artistName">
+            Artist Name
+          </label>
+          <select
             name="artistName"
+            type="text"
             placeholder="Add Artist Name"
-            value={artistName}
-            onChange={updateArtistName}
-          />
+            value={artistId}
+            onChange={updateArtistId}
+          >
+            <option value={null}>Choose an Artist</option>
+            {/* {artistNames &&
+              artistNames.map((artistName) => (
+                <option key={artistName.id} value={artistName.id}>
+                  {artistName.artistName}
+                </option>
+              ))} */}
+          </select>
           <label className="songName">Song Name</label>
           <input
             name="songName"
@@ -62,9 +89,7 @@ const SongForm = ({ user }) => {
             value={albumName}
             onChange={updateAlbumName}
           />
-          <button className="songsubmit" onClick={newSongSubmit}>
-            Submit
-          </button>
+          <input type="submit" className="songsubmit" value="Submit" />
         </div>
       </form>
     </>

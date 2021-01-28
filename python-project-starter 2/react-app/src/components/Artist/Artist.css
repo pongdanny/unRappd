@@ -7,13 +7,13 @@
 
 .artistdetails {
   text-decoration: none;
-  color: black;
-  padding-top: 15px;
+  color: white;
+  padding-top: 25px;
   padding-bottom: 15px;
-  padding-right: 25px;
-  padding-left: 25px;
-  border: 1px solid white;
-  background: white;
+  padding-right: 0px;
+  padding-left: 40px;
+  border: 1px solid black;
+  background: black;
   width: 200px;
 }
 
@@ -48,8 +48,8 @@
   border-radius: 5px;
   border: 5px solid white; */
   position: absolute;
-  bottom: -100px;
-  left: 580px;
+  bottom: -250px;
+  left: 545px;
   font-size: 20px;
 }
 /* 
@@ -63,4 +63,18 @@
   object-fit: cover;
   position: relative;
   filter: brightness(0.6);
+}
+
+.urlimages {
+  object-fit: cover;
+  height: 75px;
+  width: 75px;
+}
+
+.maincontainerartist {
+  background-color: black;
+}
+
+.urlcontainer {
+  display: flex;
 }

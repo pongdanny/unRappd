@@ -3,7 +3,7 @@ from app.models import db, Artist
 
 def seed_artists():
 
-    demo1 = Artist(id=1, userId=1, artistName="Dave East", description="David Lawrence Brewster Jr. (born June 3, 1988), better known by his stage name Dave East, is an American rapper, songwriter and actor from Harlem, New York.", imgUrl="https://www.baltimoresun.com/resizer/FwxQyTjZI5JbgfBakj1dYdOTFpE=/1200x0/top/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/LQV26IQMBVEIRF7PUEQN6ZX6OI.jpg")
+    demo1 = Artist(id=1, userId=1, artistName="Dave East", description="David Lawrence Brewster Jr. (born June 3, 1988), better known by his stage name Dave East, is an American rapper, songwriter and actor from Harlem, New York.", imgUrl="https://i.imgur.com/tgSOlSq.jpg")
     demo2 = Artist(id=2, userId=1, artistName="Pop Smoke", description="Bashar Barakah Jackson, known professionally as Pop Smoke, was an American rapper, singer, and songwriter. He was considered by many to be the face of Brooklyn drill. Born and raised in Canarsie, Brooklyn.", imgUrl="https://fstvls.s3.amazonaws.com/66/66332.jpg")
     demo3 = Artist(id=3, userId=2, artistName="Stupid Young", description="Stupid Young is a Cambodian-American rapper out of Long Beach, California. Young often talks about his daily life and struggles as an asian crip.", imgUrl="https://numberily.com/wp-content/uploads/2019/06/Stupid-Young.jpg")
     demo4 = Artist(id=4, userId=2, artistName="OMB Jay Dee", description="Coming out of Brownsville Brooklyn, OMB Jay Dee is one of the next upcoming young rappers putting on for the Brooklyn Drill scene.", imgUrl="https://pbs.twimg.com/profile_images/1180999716672299009/mtayxAb0.jpg")
