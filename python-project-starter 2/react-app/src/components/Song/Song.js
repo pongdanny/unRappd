@@ -31,9 +31,7 @@ function Song({ user }) {
               songs.map((mappedSong, idx) => {
                 return (
                   <>
-                    <a className="songdetails" href="/songdetails">
-                      {mappedSong.songName}
-                    </a>
+                    <div className="songdetails">{mappedSong.songName}</div>
                   </>
                 );
               })}

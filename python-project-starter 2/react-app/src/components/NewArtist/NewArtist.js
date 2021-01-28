@@ -41,15 +41,16 @@ const ArtistForm = ({ user }) => {
 
   return (
     <>
-      <img
-        alt="artistimg"
-        className="artistimg"
-        src="https://images.unsplash.com/photo-1508973379184-7517410fb0bc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-      ></img>
-      <div className="addnewartist">Add a New Artist! 🎤</div>
-      <form className="newArtistForm">
-        <div className="artistcontainer">
-          {/* <label className="userId">User ID</label>
+      <div className="artistpage">
+        <img
+          alt="artistimg"
+          className="artistimg"
+          src="https://images.unsplash.com/photo-1508973379184-7517410fb0bc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+        ></img>
+        <div className="addnewartist">Add a New Artist! 🎤</div>
+        <form className="newArtistForm">
+          <div className="artistcontainer">
+            {/* <label className="userId">User ID</label>
           <input
             name="userId"
             placeholder="Add User ID"
@@ -63,25 +64,26 @@ const ArtistForm = ({ user }) => {
             value={songId}
             onChange={updateSongId}
           /> */}
-          <label className="artistName">Artist Name</label>
-          <input
-            name="artistName"
-            placeholder="Add Artist Name"
-            value={artistName}
-            onChange={updateArtistName}
-          />
-          <label className="Description">Description</label>
-          <textarea
-            name="description"
-            placeholder="Add Description"
-            value={description}
-            onChange={updateDescription}
-          />
-          <button className="artistsubmit" onClick={newArtistSubmit}>
-            Submit
-          </button>
-        </div>
-      </form>
+            <label className="artistName">Artist Name</label>
+            <input
+              name="artistName"
+              placeholder="Add Artist Name"
+              value={artistName}
+              onChange={updateArtistName}
+            />
+            <label className="Description">Description</label>
+            <textarea
+              name="description"
+              placeholder="Add Description"
+              value={description}
+              onChange={updateDescription}
+            />
+            <button className="artistsubmit" onClick={newArtistSubmit}>
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
     </>
   );
 };

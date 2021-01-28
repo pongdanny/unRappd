@@ -7,13 +7,13 @@
 
 .songdetails {
   text-decoration: none;
-  color: black;
+  color: white;
   padding-top: 9px;
   padding-bottom: 5px;
   padding-right: 25px;
   padding-left: 25px;
-  border: 1px solid white;
-  background: white;
+  border: 1px solid black;
+  background: black;
   width: 200px;
 }
 
@@ -46,9 +46,9 @@
   color: black;
 }
 
-/* .songpage {
-  color: black;
-} */
+.songpage {
+  background-color: black;
+}
 
 .songlistcontainer {
   /* background-color: white;

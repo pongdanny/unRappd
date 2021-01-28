@@ -28,7 +28,7 @@ const Studio = ({ user }) => {
   }, [user]);
 
   return (
-    <div>
+    <div className="studiopage">
       <img
         alt="checkinlistimg"
         className="checkinlistimg"
@@ -68,10 +68,7 @@ const Studio = ({ user }) => {
                           Review: "{mappedCheckin.review}"
                         </div>
                         <div className="checkindetailsss">
-                          Rating[1-5]: {mappedCheckin.rating}
-                        </div>
-                        <div className="rating-content">
-                          {createStarRating(mappedCheckin.rating)}
+                          Rating: {createStarRating(mappedCheckin.rating)}
                         </div>
                         {/* <button className="editbtn">Edit</button>
                         <button className="deletebtn">Delete</button> */}
