@@ -6,10 +6,11 @@ import { getSongs } from "../../services/song";
 import "./CheckinForm.css";
 // import { map } from "lodash";
 
-const CheckinForm = () => {
+const CheckinForm = ({ user }) => {
   const [errors, setErrors] = useState([]);
+  // const [userId, setUserId] = useState("");
   const [songNames, setSongNames] = useState("");
-  const [songName, setSongName] = useState("");
+  const [songId, setSongId] = useState("");
   const [review, setReview] = useState("");
   const [rating, setRating] = useState(5);
   const history = useHistory();
@@ -24,15 +25,9 @@ const CheckinForm = () => {
   }, []);
 
   const newCheckinSubmit = async (e) => {
-    // console.log("this works", checkin);
     e.preventDefault();
-    // e.stopPropagation();
-    // const newCheckin = await createCheckin(songNames, review, rating);
-    const data = new FormData();
-    data.append("songNames", songNames);
-    data.append("rating", rating);
-    data.append("review", review);
-    const checkin = await createCheckin(data);
+    console.log("this works", songId, rating, review);
+    const checkin = await createCheckin(songId, review, rating, user.id);
     console.log("Bump Made!", checkin);
 
     if (!checkin.errors) {
@@ -44,8 +39,8 @@ const CheckinForm = () => {
     }
   };
 
-  const updateSongName = (e) => {
-    setSongName(e.target.value);
+  const updateSongId = (e) => {
+    setSongId(e.target.value);
   };
 
   const updateReview = (e) => {
@@ -56,7 +51,7 @@ const CheckinForm = () => {
   //   setRating(e.target.value);
   // };
 
-  console.log("this works", songNames);
+  console.log("this works", songId);
 
   return (
     <>
@@ -83,8 +78,8 @@ const CheckinForm = () => {
             name="songName"
             type="text"
             placeholder="Add Song Name"
-            value={songName}
-            onChange={updateSongName}
+            value={songId}
+            onChange={updateSongId}
           >
             <option value={null}>Choose a Song</option>
             {/* {map(
@@ -132,13 +127,12 @@ const CheckinForm = () => {
             </div>
           </div>
           <label className="rating">Review </label>
-          <input
+          <textarea
             name="review"
-            type="text"
             placeholder="Add Review"
             value={review}
             onChange={updateReview}
-          />
+          ></textarea>
           {/* <button
             className="checkinsubmit"
             type="submit"

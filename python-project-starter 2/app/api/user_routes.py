@@ -1,6 +1,7 @@
-from flask import Blueprint, jsonify
+from flask import Blueprint, jsonify, request
 from flask_login import login_required
 from app.models import User, Song, Artist, Checkin, db
+from app.forms import CheckinForm
 from sqlalchemy.orm import selectinload
 
 user_routes = Blueprint('users', __name__)
@@ -39,7 +40,8 @@ def create_checkin(id):
             data = request.get_json()
 
             new_checkin = Checkin(
-                songName=data['songName'],
+                userId=id,
+                songId=data['songId'],
                 review=data['review'],
                 rating=data['rating'],
             )

@@ -48,15 +48,15 @@ def new_checkin():
     form = CheckinForm()
     form['csrf_token'].data = request.cookies['csrf_token']
 
-    for key in dict.keys(form.data):
-        print(key)
-        print('\t', form.data[key])
+    # for key in dict.keys(form.data):
+    #     print(key)
+    #     print('\t', form.data[key])
 
     if form.validate_on_submit():
         checkin = Checkin(
-            username=form.data["username"],
+            # username=form.data["username"],
             songName=form.data["songName"],
-            artistName=form.data["artistName"],
+            # artistName=form.data["artistName"],
             review=form.data["review"],
             rating=form.data["rating"]
         )
@@ -66,4 +66,5 @@ def new_checkin():
         print(checkin.id)
 
         return checkin.to_dict()
+        # console.log("this works")
     return {'errors': validator_errors_to_error_messages(form.errors)}

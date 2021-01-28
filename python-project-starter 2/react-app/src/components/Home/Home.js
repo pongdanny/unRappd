@@ -12,8 +12,8 @@ const Home = () => {
         />
       </div>
       <div id="hero-content">
-        <div class="container">
-          <div class="content-shadow">
+        <div className="container">
+          <div className="content-shadow">
             <h1 id="hero-title">Welcome to UNRAPPD!</h1>
             <div id="hero-description">
               <p>

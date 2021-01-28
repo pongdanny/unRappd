@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, useHistory } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import LogoutButton from "./auth/LogoutButton";
 import LoginForm from "./auth/LoginForm";
 import SignUpForm from "./auth/SignUpForm";
 import "./NavBar.css";
 
 const NavBar = ({ setAuthenticated, authenticated }) => {
-  const history = useHistory();
-  const [search, setSearch] = useState("");
-  const [data, setData] = useState([]);
+  // const history = useHistory();
+  // const [search, setSearch] = useState("");
+  const [setData] = useState([]);
 
   useEffect(() => {
     const fetchAll = async () => {
@@ -22,7 +22,7 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
       artistsAndSongs.push(artistResData);
       artistsAndSongs.push(songResData);
 
-      setData(artistsAndSongs);
+      // setData(artistsAndSongs);
     };
     fetchAll();
   }, []);

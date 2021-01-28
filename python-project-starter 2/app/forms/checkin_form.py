@@ -5,8 +5,8 @@ from app.models import Checkin
 
 
 class CheckinForm(FlaskForm):
-    userId = IntegerField("userId", validators=[DataRequired()])
+    # userId = IntegerField("userId", validators=[DataRequired()])
     songId = IntegerField("songId", validators=[DataRequired()])
-    artistId = IntegerField("artistId", validators=[DataRequired()])
+    # artistId = IntegerField("artistId", validators=[DataRequired()])
     review = TextAreaField("review", validators=[DataRequired()])
     rating = IntegerField("rating", validators=[DataRequired()])
