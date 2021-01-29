@@ -8,6 +8,7 @@ class Song(db.Model):
     artistId = db.Column(db.Integer, db.ForeignKey("artists.id"), nullable=False)
     songName = db.Column(db.String, nullable=False)
     albumName = db.Column(db.String)
+    coverArt = db.Column(db.String)
 
     artist = db.relationship("Artist", back_populates="songs")
     # user = db.relationship("User", back_populates="songs")
@@ -20,5 +21,6 @@ class Song(db.Model):
           "songName": self.songName,
           "artist": self.artist.to_dict(),
           "albumName": self.albumName,
+          "coverArt": self.coverArt
           # "user": self.user.to_dict()
           }

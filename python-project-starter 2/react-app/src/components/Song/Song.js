@@ -31,7 +31,14 @@ function Song({ user }) {
               songs.map((mappedSong, idx) => {
                 return (
                   <>
-                    <div className="songdetails">{mappedSong.songName}</div>
+                    <div className="covercontainer">
+                      <img
+                        className="coverartimages"
+                        src={mappedSong.coverArt}
+                        alt="coverartalt"
+                      />
+                      <div className="songdetails">{mappedSong.songName}</div>
+                    </div>
                   </>
                 );
               })}
