@@ -8,7 +8,7 @@
 .songdetails {
   text-decoration: none;
   color: white;
-  padding-top: 20px;
+  padding-top: 30px;
   padding-bottom: 5px;
   padding-right: 25px;
   padding-left: 25px;
@@ -24,7 +24,7 @@
 
 .songtext {
   position: absolute;
-  top: 170px;
+  top: 190px;
   left: 587px;
   font-weight: bold;
   color: white;
@@ -32,7 +32,7 @@
 
 .songsubtext {
   position: absolute;
-  top: 240px;
+  top: 280px;
   left: 633px;
   font-weight: bold;
   color: white;
@@ -57,9 +57,10 @@
   border-radius: 5px;
   border: 5px solid white; */
   position: absolute;
-  bottom: -375px;
-  left: 555px;
+  bottom: -340px;
+  left: 360px;
   font-size: 20px;
+  columns: 2 auto;
 }
 
 /* .songlistcontainer:hover {
@@ -80,6 +81,6 @@
 
 .coverartimages {
   object-fit: cover;
-  height: 50px;
-  width: 50px;
+  height: 80px;
+  width: 80px;
 }

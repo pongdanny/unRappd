@@ -37,7 +37,7 @@ function Artist({ user }) {
                         src={mappedArtist.imgUrl}
                         alt="artistalt"
                       />
-                      <div className="artistdetails" href="/artistdetails">
+                      <div className="artistdetails">
                         &nbsp;{mappedArtist.artistName}
                       </div>
                     </div>

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap");
+
 .checkinlist {
   display: flex;
   flex-direction: column;
@@ -9,7 +11,7 @@
   text-decoration: none;
   color: white;
   position: absolute;
-  top: -60px;
+  top: -50px;
   left: 505px;
 }
 
@@ -69,7 +71,7 @@
 
 .checkintext {
   position: absolute;
-  top: -155px;
+  top: -135px;
   left: 370px;
   font-weight: bold;
   color: white;
@@ -145,4 +147,39 @@
   color: black;
   border: 1px solid white;
   border-radius: 10px;
+}
+
+.speech-bubble {
+  position: relative;
+  background: #00aabb;
+  border-radius: 0.4em;
+}
+
+.speech-bubble:after {
+  content: "";
+  position: absolute;
+  left: -119px;
+  top: 100px;
+  width: 0;
+  height: 0;
+  border: 55px solid transparent;
+  border-right-color: black;
+  border-left: 0;
+  border-bottom: 0;
+  margin-top: -27.5px;
+  margin-left: -55px;
+}
+
+.wheat {
+  font-weight: bolder;
+  color: springgreen;
+}
+
+.starz {
+  color: goldenrod;
+}
+
+.revspan {
+  font-family: "Nanum Brush Script", cursive;
+  font-size: 32px;
 }

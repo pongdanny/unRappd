@@ -7,7 +7,7 @@
 
 .userdata {
   position: absolute;
-  margin-top: -400px;
+  margin-top: -380px;
   font-size: 20px;
   margin-left: -5px;
   font-weight: bold;
@@ -98,7 +98,7 @@ html {
 
 .profile-header__text {
   margin-top: -5rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 2.5rem;
 }
 
@@ -128,5 +128,19 @@ html {
 }
 
 .email {
+  margin-top: 25px;
   font-size: 28px;
+}
+
+.editprofile {
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+.editprofile:hover {
+  cursor: pointer;
+  font-weight: bolder;
+  border: 1px solid white;
+  border-radius: 5px;
 }

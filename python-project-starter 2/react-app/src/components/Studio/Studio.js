@@ -86,21 +86,36 @@ const Studio = ({ user }) => {
                     checkins.map((mappedCheckin, idx) => {
                       return (
                         <>
+                          <div className="speech-bubble"></div>
                           <div className="checkindetailcontainer">
                             <div
                               className="checkindetails"
                               href="/checkindetails"
                             >
                               {" "}
-                              {mappedCheckin.user.username} is bumpin{" "}
-                              {mappedCheckin.song.songName} by{" "}
-                              {mappedCheckin.song.artist.artistName}
+                              <span className="wheat">
+                                {mappedCheckin.user.username}
+                              </span>{" "}
+                              is bumpin{" "}
+                              <span className="wheat">
+                                {mappedCheckin.song.songName}
+                              </span>{" "}
+                              by{" "}
+                              <span className="wheat">
+                                {mappedCheckin.song.artist.artistName}
+                              </span>
                             </div>
                             <div className="checkindetailss">
-                              Review: "{mappedCheckin.review}"
+                              {" "}
+                              <span className="revspan">
+                                "{mappedCheckin.review}"
+                              </span>
                             </div>
                             <div className="checkindetailsss">
-                              Rating: {createStarRating(mappedCheckin.rating)}
+                              CLOUT:{" "}
+                              <span className="starz">
+                                {createStarRating(mappedCheckin.rating)}
+                              </span>
                             </div>
                             {user.id === mappedCheckin.user.id && (
                               <>

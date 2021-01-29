@@ -46,7 +46,7 @@ const Profile = ({ user }) => {
 
               <h1 className="profile-header__text">
                 <section>
-                  <h1>Recent Bump:</h1>
+                  <h1>Bump of the Day:</h1>
                   <h2>{checkin && checkin[0].review}</h2>
                 </section>
               </h1>

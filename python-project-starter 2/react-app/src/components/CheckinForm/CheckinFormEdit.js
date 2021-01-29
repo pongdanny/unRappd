@@ -40,10 +40,10 @@ const CheckinFormEdit = ({
 
   return (
     <>
-      <img
+      {/* <img
         className="checkinimg"
         src="https://images.unsplash.com/photo-1551710029-607e06bd45ff?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
-      />
+      /> */}
       <div className="addnewcheckin">Add a New Bump! 🎵</div>
       <form onSubmit={newCheckinSubmit} className="newCheckinForm">
         <div className="checkincontainer">

@@ -3,7 +3,7 @@
   background-color: black;
   width: 1160px;
   padding-bottom: 45px;
-  padding-top: 45px;
+  padding-top: 30px;
   padding-left: 130px;
   padding-right: 150px;
   color: white;
@@ -15,16 +15,15 @@
 }
 
 .about {
-  margin-top: 5px;
-  margin-left: -8px;
-  font-size: 20px;
+  margin-top: 25px;
+  margin-left: -18px;
+  font-size: 16px;
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   min-width: 500px;
 }
 
 .about > a {
-  /* margin-top: 0px; */
-
+  padding-top: 10px;
   color: white;
 }
 
@@ -35,10 +34,11 @@
 
 .title {
   min-width: 500px;
-  font-size: 50px;
+  font-size: 36px;
   color: white;
   position: relative;
   right: 20px;
+  top: 10px;
 }
 
 .links {
@@ -54,7 +54,7 @@
   display: block;
   margin: 45px;
   color: white;
-  font-size: 25px;
+  font-size: 23px;
   font-weight: bold;
   text-decoration: none;
 }
@@ -68,7 +68,8 @@
 
 .repo {
   height: 10px;
-  padding-top: 45px;
+  padding-top: 35px;
+  padding-right: 120px;
 }
 
 .links > a:hover {
@@ -79,20 +80,20 @@
 }
 
 .githublink {
-  width: 125px;
-  height: 125px;
+  width: 100px;
+  height: 100px;
   padding-bottom: 10px;
 }
 
 .linkedinlink {
-  width: 100px;
-  height: 100px;
-  padding-top: 10px;
+  width: 75px;
+  height: 75px;
+  padding-top: 12px;
 }
 
 .angellistlink {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   padding-top: 10px;
 }
 
