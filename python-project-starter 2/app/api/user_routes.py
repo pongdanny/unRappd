@@ -61,17 +61,16 @@ def create_checkin(id):
 def edit_checkin(id, checkin_id):
     form = CheckinForm()
     form['csrf_token'].data = request.cookies['csrf_token']
-
+    print(f"HERE!!!!!!!!!!!!")
     if form.validate_on_submit():
-        if request.is_json():
+        if request.is_json:
             checkin_to_edit = Checkin.query.get(checkin_id)
-
+            print(f"CHECKIN TO EDIT!!!!!!!!!! {checkin_to_edit}")
             if not checkin_to_edit:
                 return {"errors": [f"Review with ID {checkin_id} does not exist"]}
 
             data = request.get_json()
 
-            checkin_to_edit.songId = form.data['songId']
             checkin_to_edit.review = form.data['review']
             checkin_to_edit.rating = data['rating']
 
@@ -83,6 +82,7 @@ def edit_checkin(id, checkin_id):
             return {"error": "The request payload is not in JSON format"}
     else:
         return {'errors': validation_errors_to_error_messages(form.errors)}, 401
+
 
 
 @user_routes.route('/<int:id>/checkins/<int:checkin_id>', methods=["DELETE"])

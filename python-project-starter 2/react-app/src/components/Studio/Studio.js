@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Studio.css";
-import CheckinForm from "../CheckinForm/CheckinForm";
+import CheckinFormEdit from "../CheckinForm/CheckinFormEdit";
 import { getCheckins, deleteCheckin } from "../../services/checkin";
 // import { getSongs } from "../../services/song";
 // import Song from "../Song/Song";
@@ -9,6 +9,7 @@ const Studio = ({ user }) => {
   const [checkins, setCheckins] = useState(null);
   const [currentCheckin, setCurrentCheckin] = useState(null);
   const [isFormVisible, setIsFormVisible] = useState(false);
+  // const [isCheckinVisible, setIsCheckinVisible] = useState(true);
 
   const createStarRating = (rating) => {
     let stars = [];
@@ -32,6 +33,7 @@ const Studio = ({ user }) => {
 
   const renderEdit = (e) => {
     setCurrentCheckin(checkins[e.target.id]);
+    console.log("this works!", checkins[e.target.id]);
     setIsFormVisible(true);
   };
 
@@ -51,7 +53,7 @@ const Studio = ({ user }) => {
       ></img>
       <h1 className="checkintext">Check out the Recent Bumps!</h1>
       {isFormVisible && (
-        <CheckinForm
+        <CheckinFormEdit
           user={user}
           currentCheckin={currentCheckin}
           setCheckins={setCheckins}
@@ -77,38 +79,55 @@ const Studio = ({ user }) => {
         <section>
           <div className="checkinlistcontainer">
             <div className="checkinlist">
-              {checkins &&
-                checkins.map((mappedCheckin, idx) => {
-                  return (
-                    <>
-                      <div className="checkindetailcontainer">
-                        <div className="checkindetails" href="/checkindetails">
-                          {" "}
-                          {mappedCheckin.user.username} is bumpin{" "}
-                          {mappedCheckin.song.songName} by{" "}
-                          {mappedCheckin.song.artist.artistName}
-                        </div>
-                        <div className="checkindetailss">
-                          Review: "{mappedCheckin.review}"
-                        </div>
-                        <div className="checkindetailsss">
-                          Rating: {createStarRating(mappedCheckin.rating)}
-                        </div>
-                        <button className="" id={idx} onClick={renderEdit}>
-                          Edit
-                        </button>
-                        <button
-                          className=""
-                          onClick={() => deleteHandler(mappedCheckin.id)}
-                        >
-                          Delete
-                        </button>
-                        {/* <button className="editbtn">Edit</button>
-                        <button className="deletebtn">Delete</button> */}
-                      </div>
-                    </>
-                  );
-                })}
+              {!isFormVisible ? (
+                <>
+                  {checkins &&
+                    checkins.map((mappedCheckin, idx) => {
+                      return (
+                        <>
+                          <div className="checkindetailcontainer">
+                            <div
+                              className="checkindetails"
+                              href="/checkindetails"
+                            >
+                              {" "}
+                              {mappedCheckin.user.username} is bumpin{" "}
+                              {mappedCheckin.song.songName} by{" "}
+                              {mappedCheckin.song.artist.artistName}
+                            </div>
+                            <div className="checkindetailss">
+                              Review: "{mappedCheckin.review}"
+                            </div>
+                            <div className="checkindetailsss">
+                              Rating: {createStarRating(mappedCheckin.rating)}
+                            </div>
+                            {user.id === mappedCheckin.user.id && (
+                              <>
+                                <button
+                                  className=""
+                                  id={idx}
+                                  onClick={renderEdit}
+                                >
+                                  Edit
+                                </button>
+                                <button
+                                  className=""
+                                  onClick={() =>
+                                    deleteHandler(mappedCheckin.id)
+                                  }
+                                >
+                                  Delete
+                                </button>
+                              </>
+                            )}
+                            {/* <button className="editbtn">Edit</button>
+                          <button className="deletebtn">Delete</button> */}
+                          </div>
+                        </>
+                      );
+                    })}
+                </>
+              ) : null}
             </div>
           </div>
         </section>

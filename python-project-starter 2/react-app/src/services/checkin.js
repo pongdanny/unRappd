@@ -1,4 +1,4 @@
-export const getCheckins = async (id) => {
+export const getCheckins = async () => {
   const res = await fetch(`/api/checkins/`);
   if (res.ok) {
     return await res.json();
@@ -25,20 +25,13 @@ export const createCheckin = async (songId, review, rating, userId) => {
   return await response.json();
 };
 
-export const editCheckin = async (
-  songId,
-  checkinId,
-  review,
-  rating,
-  userId
-) => {
-  const response = await fetch(`/api/users/${userId}/reviews/${checkinId}`, {
+export const editCheckin = async (checkinId, review, rating, userId) => {
+  const response = await fetch(`/api/users/${userId}/checkins/${checkinId}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      songId,
       review,
       rating,
     }),
