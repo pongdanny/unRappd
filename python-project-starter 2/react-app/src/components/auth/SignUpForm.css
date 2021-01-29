@@ -1,0 +1,32 @@
+.textuser {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.textemail {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.textpass {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.textverify {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.signsubmit {
+  margin-top: 10px;
+  background-color: white;
+  border: none;
+}
+
+.signsubmit:hover {
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 5px;
+}

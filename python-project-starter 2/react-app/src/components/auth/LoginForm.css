@@ -1,0 +1,43 @@
+.loginbtnz {
+  background-color: white;
+  border: none;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-top: 10px;
+}
+
+.demobtnz {
+  background-color: white;
+  border: none;
+  margin-right: 10px;
+  margin-left: 0px;
+  margin-top: 10px;
+}
+
+.loginbtnz:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.demobtnz:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.link-to-sign-up {
+  margin-top: 10px;
+}
+
+.emailtext {
+  margin-top: 5x;
+  margin-bottom: 5px;
+}
+
+.passwordtext {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

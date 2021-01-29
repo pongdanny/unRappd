@@ -3,6 +3,8 @@ import { Redirect } from "react-router-dom";
 import { signUp } from "../../services/auth";
 import Modal from "react-modal";
 
+import "./SignUpForm.css";
+
 const customStyles = {
   content: {
     top: "50%",
@@ -11,7 +13,7 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    height: "300px",
+    height: "350px",
     width: "280px",
     borderRadius: "5px",
     fontFamily: "Century Gothic, CenturyGothic, AppleGothic, sansSerif",
@@ -87,7 +89,9 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
             <h3>Let's Setup Your Account!</h3>
           </div>
           <form className="sign-up-form" onSubmit={onSignUp}>
-            <label>Username</label>
+            <div className="textuser">
+              <label>Username</label>
+            </div>
             <div>
               <input
                 type="text"
@@ -96,7 +100,7 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
                 value={username}
               ></input>
             </div>
-            <div>
+            <div className="textemail">
               <label>Email</label>
             </div>
             <div>
@@ -107,7 +111,7 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
                 value={email}
               ></input>
             </div>
-            <div>
+            <div className="textpass">
               <label>Password</label>
             </div>
             <div className="password-input-field">
@@ -118,7 +122,7 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
                 value={password}
               ></input>
             </div>
-            <div>
+            <div className="textverify">
               <label>Verify Password</label>
             </div>
             <div>
@@ -130,7 +134,9 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
                 required={true}
               ></input>
             </div>
-            <button type="submit">Register</button>
+            <button className="signsubmit" type="submit">
+              Register
+            </button>
           </form>
         </div>
       </Modal>

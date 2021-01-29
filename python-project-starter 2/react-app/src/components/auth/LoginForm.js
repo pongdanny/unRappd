@@ -13,7 +13,7 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    height: "250px",
+    height: "275px",
     width: "300px",
     borderRadius: "5px",
     fontFamily: "Century Gothic, CenturyGothic, AppleGothic, sansSerif",
@@ -98,7 +98,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
               ))}
             </div>
             <div>
-              <div>
+              <div className="emailtext">
                 <label htmlFor="email">Email</label>
               </div>
               <input
@@ -110,7 +110,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
               />
             </div>
             <div>
-              <div>
+              <div className="passwordtext">
                 <label htmlFor="password">Password</label>
               </div>
               <input
@@ -121,8 +121,12 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
                 onChange={updatePassword}
               />
               <div>
-                <button type="submit">Login</button>
-                <button onClick={demoUser}>Demo</button>
+                <button className="loginbtnz" type="submit">
+                  Login
+                </button>
+                <button className="demobtnz" onClick={demoUser}>
+                  Demo
+                </button>
               </div>
               <div className="link-to-sign-up">
                 <NavLink to="/sign-up" exact={true} activeClassName="active">
