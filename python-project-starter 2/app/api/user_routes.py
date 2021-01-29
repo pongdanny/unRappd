@@ -71,7 +71,7 @@ def edit_checkin(id, checkin_id):
 
             data = request.get_json()
 
-            checkin_to_edit.songName = form.data['songName']
+            checkin_to_edit.songId = form.data['songId']
             checkin_to_edit.review = form.data['review']
             checkin_to_edit.rating = data['rating']
 

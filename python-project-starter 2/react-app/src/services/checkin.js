@@ -24,3 +24,31 @@ export const createCheckin = async (songId, review, rating, userId) => {
   console.log("this works");
   return await response.json();
 };
+
+export const editCheckin = async (
+  songId,
+  checkinId,
+  review,
+  rating,
+  userId
+) => {
+  const response = await fetch(`/api/users/${userId}/reviews/${checkinId}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      songId,
+      review,
+      rating,
+    }),
+  });
+  return await response.json();
+};
+
+export const deleteCheckin = async (userId, checkinId) => {
+  const response = await fetch(`/api/users/${userId}/checkins/${checkinId}`, {
+    method: "DELETE",
+  });
+  return await response.json();
+};

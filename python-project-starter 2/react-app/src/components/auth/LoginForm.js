@@ -23,6 +23,7 @@ const customStyles = {
 Modal.setAppElement("#root");
 
 const LoginForm = ({ authenticated, setAuthenticated }) => {
+  // const dispatch = useDispatch();
   const [errors, setErrors] = useState([]);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -58,8 +59,18 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
   };
 
   if (authenticated) {
-    return <Redirect to="/" />;
+    return <Redirect to="/studio" />;
   }
+
+  const demoUser = async (e) => {
+    e.preventDefault();
+    const user = await login("demo@aa.io", "password");
+    if (!user.errors) {
+      setAuthenticated(true);
+    } else {
+      setErrors(user.errors);
+    }
+  };
 
   return (
     <>
@@ -111,6 +122,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
               />
               <div>
                 <button type="submit">Login</button>
+                <button onClick={demoUser}>Demo</button>
               </div>
               <div className="link-to-sign-up">
                 <NavLink to="/sign-up" exact={true} activeClassName="active">

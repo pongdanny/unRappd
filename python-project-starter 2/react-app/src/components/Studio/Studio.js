@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./Studio.css";
-import { getCheckins } from "../../services/checkin";
+import CheckinForm from "../CheckinForm/CheckinForm";
+import { getCheckins, deleteCheckin } from "../../services/checkin";
 // import { getSongs } from "../../services/song";
 // import Song from "../Song/Song";
 
 const Studio = ({ user }) => {
   const [checkins, setCheckins] = useState(null);
+  const [currentCheckin, setCurrentCheckin] = useState(null);
+  const [isFormVisible, setIsFormVisible] = useState(false);
 
   const createStarRating = (rating) => {
     let stars = [];
@@ -27,6 +30,18 @@ const Studio = ({ user }) => {
     })();
   }, [user]);
 
+  const renderEdit = (e) => {
+    setCurrentCheckin(checkins[e.target.id]);
+    setIsFormVisible(true);
+  };
+
+  const deleteHandler = async (checkinId) => {
+    await deleteCheckin(user.id, checkinId);
+    const checkins = await getCheckins(user.id);
+    setCheckins(checkins.checkins);
+    setIsFormVisible(false);
+  };
+
   return (
     <div className="studiopage">
       <img
@@ -35,6 +50,15 @@ const Studio = ({ user }) => {
         src="https://images.unsplash.com/photo-1568246605205-f8df0dde3c35?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
       ></img>
       <h1 className="checkintext">Check out the Recent Bumps!</h1>
+      {isFormVisible && (
+        <CheckinForm
+          user={user}
+          currentCheckin={currentCheckin}
+          setCheckins={setCheckins}
+          getCheckins={getCheckins}
+          setIsFormVisible={setIsFormVisible}
+        />
+      )}
       {/* <h2>
           user {checkins && checkins[0].user.username} is bumping{" "}
           {checkins && checkins[0].song.songName} by{" "}
@@ -70,6 +94,15 @@ const Studio = ({ user }) => {
                         <div className="checkindetailsss">
                           Rating: {createStarRating(mappedCheckin.rating)}
                         </div>
+                        <button className="" id={idx} onClick={renderEdit}>
+                          Edit
+                        </button>
+                        <button
+                          className=""
+                          onClick={() => deleteHandler(mappedCheckin.id)}
+                        >
+                          Delete
+                        </button>
                         {/* <button className="editbtn">Edit</button>
                         <button className="deletebtn">Delete</button> */}
                       </div>
