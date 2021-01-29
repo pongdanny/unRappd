@@ -84,7 +84,6 @@ def edit_checkin(id, checkin_id):
         return {'errors': validation_errors_to_error_messages(form.errors)}, 401
 
 
-
 @user_routes.route('/<int:id>/checkins/<int:checkin_id>', methods=["DELETE"])
 @login_required
 def delete_checkin(checkin_id):

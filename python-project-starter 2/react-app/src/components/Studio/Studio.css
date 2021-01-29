@@ -9,8 +9,8 @@
   text-decoration: none;
   color: white;
   position: absolute;
-  top: 275px;
-  left: 660px;
+  top: -60px;
+  left: 505px;
 }
 
 .bumpsongbtn:hover {
@@ -69,8 +69,8 @@
 
 .checkintext {
   position: absolute;
-  top: 175px;
-  left: 500px;
+  top: -155px;
+  left: 370px;
   font-weight: bold;
   color: white;
 }
@@ -113,4 +113,36 @@
 
 .studiopage {
   background-color: black;
+}
+
+.editzbtn {
+  margin-top: -50px;
+  margin-left: 725px;
+  position: absolute;
+  color: white;
+  background-color: black;
+  border: none;
+}
+
+.editzbtn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.delzbtn {
+  margin-top: -50px;
+  margin-left: 775px;
+  position: absolute;
+  color: white;
+  background-color: black;
+  border: none;
+}
+
+.delzbtn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid white;
+  border-radius: 10px;
 }

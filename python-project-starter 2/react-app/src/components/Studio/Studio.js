@@ -38,8 +38,8 @@ const Studio = ({ user }) => {
   };
 
   const deleteHandler = async (checkinId) => {
-    await deleteCheckin(user.id, checkinId);
-    const checkins = await getCheckins(user.id);
+    await deleteCheckin(checkinId);
+    const checkins = await getCheckins(user);
     setCheckins(checkins.checkins);
     setIsFormVisible(false);
   };
@@ -51,7 +51,7 @@ const Studio = ({ user }) => {
         className="checkinlistimg"
         src="https://images.unsplash.com/photo-1568246605205-f8df0dde3c35?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
       ></img>
-      <h1 className="checkintext">Check out the Recent Bumps!</h1>
+
       {isFormVisible && (
         <CheckinFormEdit
           user={user}
@@ -71,9 +71,6 @@ const Studio = ({ user }) => {
           {checkins && checkins[1].song.songName} by{" "}
           {checkins && checkins[1].artist.artistName}
         </h2> */}
-      <a href="/newcheckin" className="bumpsongbtn">
-        Bump a Song
-      </a>
 
       <div>
         <section>
@@ -81,6 +78,10 @@ const Studio = ({ user }) => {
             <div className="checkinlist">
               {!isFormVisible ? (
                 <>
+                  <h1 className="checkintext">Check out the Recent Bumps!</h1>
+                  <a href="/newcheckin" className="bumpsongbtn">
+                    Bump a Song
+                  </a>
                   {checkins &&
                     checkins.map((mappedCheckin, idx) => {
                       return (
@@ -104,14 +105,14 @@ const Studio = ({ user }) => {
                             {user.id === mappedCheckin.user.id && (
                               <>
                                 <button
-                                  className=""
+                                  className="editzbtn"
                                   id={idx}
                                   onClick={renderEdit}
                                 >
                                   Edit
                                 </button>
                                 <button
-                                  className=""
+                                  className="delzbtn"
                                   onClick={() =>
                                     deleteHandler(mappedCheckin.id)
                                   }
