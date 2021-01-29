@@ -112,6 +112,7 @@ const CheckinForm = ({ user }) => {
               {[5, 4, 3, 2, 1].map((starRating) => (
                 <>
                   <input
+                    className=""
                     type="radio"
                     name="rate"
                     id={`review__stars_${starRating}`}
@@ -120,7 +121,7 @@ const CheckinForm = ({ user }) => {
                   />
                   <label
                     htmlFor={`review__stars_${starRating}`}
-                    className="fas fa-star"
+                    className=""
                   ></label>
                 </>
               ))}

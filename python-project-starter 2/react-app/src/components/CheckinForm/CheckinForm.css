@@ -31,13 +31,13 @@
 .checkinsubmit {
   position: absolute;
   padding-top: 1px;
-  bottom: 103px;
+  bottom: 93px;
   left: 592px;
 }
 
 .checkincontainer {
   background-color: white;
-  height: 170px;
+  height: 180px;
   width: 220px;
   border-radius: 5px;
   border: 5px solid white;
