@@ -91,6 +91,7 @@ def delete_checkin(checkin_id):
 
     if checkin_to_delete:
         checkin_to_delete.delete()
+        db.session.commit()
         return {"response": f"Successfully Deleted!"}
     else:
         return {"errors": [f"Bump with ID {checkin_id} does not exist"]}

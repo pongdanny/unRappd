@@ -38,9 +38,11 @@ const Studio = ({ user }) => {
   };
 
   const deleteHandler = async (checkinId) => {
-    await deleteCheckin(checkinId);
-    const checkins = await getCheckins(user);
-    setCheckins(checkins.checkins);
+    // console.log(user.id);
+    await deleteCheckin(user.id, checkinId);
+    const checkins = await getCheckins(user.id);
+    setCheckins(checkins.res.checkins);
+
     setIsFormVisible(false);
   };
 
@@ -129,7 +131,7 @@ const Studio = ({ user }) => {
                                 <button
                                   className="delzbtn"
                                   onClick={() =>
-                                    deleteHandler(mappedCheckin.id)
+                                    deleteHandler(mappedCheckin.user.id)
                                   }
                                 >
                                   Delete

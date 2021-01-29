@@ -34,7 +34,7 @@ def checkin_checkin(id):
 
 
 @checkin_routes.route('/<int:id>', methods=["DELETE"])
-def delete_checkin(id):
+def delete_checkin():
     checkin_to_delete = Checkin.query.get(id)
     if checkin_to_delete:
         checkin_to_delete.delete()

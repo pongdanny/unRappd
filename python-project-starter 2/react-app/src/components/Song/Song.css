@@ -15,6 +15,7 @@
   border: 1px solid black;
   background: black;
   width: 200px;
+  margin-right: 100px;
 }
 
 .songdetailcontainer {
@@ -58,7 +59,7 @@
   border: 5px solid white; */
   position: absolute;
   bottom: -340px;
-  left: 360px;
+  left: 310px;
   font-size: 20px;
   columns: 2 auto;
 }
