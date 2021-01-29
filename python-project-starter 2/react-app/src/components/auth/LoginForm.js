@@ -17,6 +17,8 @@ const customStyles = {
     width: "300px",
     borderRadius: "5px",
     fontFamily: "Century Gothic, CenturyGothic, AppleGothic, sansSerif",
+    color: "white",
+    backgroundColor: "black",
   },
 };
 
@@ -129,9 +131,9 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
                 </button>
               </div>
               <div className="link-to-sign-up">
-                <NavLink to="/sign-up" exact={true} activeClassName="active">
+                {/* <NavLink to="/sign-up" exact={true} activeClassName="active">
                   New User? Sign Up!
-                </NavLink>
+                </NavLink> */}
               </div>
             </div>
           </form>
