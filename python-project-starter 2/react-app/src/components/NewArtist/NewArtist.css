@@ -6,7 +6,7 @@
   width: 100px;
   /* justify-content: center; */
   /* align-items: center; */
-  padding-left: 600px;
+  padding-left: 840px;
   position: absolute;
   top: 475px;
 }
@@ -14,7 +14,7 @@
 .addnewartist {
   position: absolute;
   top: 300px;
-  padding-left: 520px;
+  padding-left: 760px;
   font-size: 40px;
   font-weight: bold;
   color: white;
@@ -32,15 +32,16 @@
   position: absolute;
   padding-top: 1px;
   bottom: 140px;
-  left: 611px;
+  left: 851px;
 }
 
 .artistcontainer {
-  background-color: white;
+  background-color: black;
   height: 128px;
   width: 183px;
   border-radius: 5px;
-  border: 10px solid white;
+  border: 10px solid black;
+  color: white;
 }
 
 .artistpage {
