@@ -9,6 +9,7 @@
   padding-left: 840px;
   position: absolute;
   top: 475px;
+  text-align: center;
 }
 
 .addnewartist {
@@ -32,7 +33,7 @@
   position: absolute;
   padding-top: 1px;
   bottom: 140px;
-  left: 851px;
+  left: 911px;
 }
 
 .artistcontainer {

@@ -9,6 +9,7 @@
   padding-left: 850px;
   position: absolute;
   top: 475px;
+  text-align: center;
 }
 
 .addnewsong {
@@ -32,7 +33,7 @@
   position: absolute;
   padding-top: 1px;
   bottom: 115px;
-  left: 861px;
+  left: 910px;
 }
 
 .songcontainer {
