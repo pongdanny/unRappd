@@ -103,7 +103,7 @@ const CheckinForm = ({ user }) => {
           <label className="review"></label>
           <div className="star-container">
             <label htmlFor="content" className="star-widget">
-              Rating
+              &nbsp;&nbsp;Rating
             </label>
             <div
               className="review__stars"
