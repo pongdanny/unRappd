@@ -1,64 +1,66 @@
-.footer {
-  /* border-top: solid 2px black; */
-  background-color: black;
-  width: 1160px;
-  padding-bottom: 45px;
-  padding-top: 30px;
-  padding-left: 130px;
-  padding-right: 150px;
-  color: white;
-  position: relative;
-  overflow: hidden;
-  right: 0px;
-  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-  /* margin-top: 420px; */
-}
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  .footer {
+    /* border-top: solid 2px black; */
+    background-color: black;
+    width: 1160px;
+    padding-bottom: 45px;
+    padding-top: 30px;
+    padding-left: 130px;
+    padding-right: 150px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    right: 0px;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    /* margin-top: 420px; */
+  }
 
-.about {
-  margin-top: 25px;
-  margin-left: -18px;
-  font-size: 16px;
-  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-  min-width: 500px;
-}
+  .about {
+    margin-top: 25px;
+    margin-left: -18px;
+    font-size: 16px;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    min-width: 500px;
+  }
 
-.about > a {
-  padding-top: 10px;
-  color: white;
-}
+  .about > a {
+    padding-top: 10px;
+    color: white;
+  }
 
-.about > a:hover {
-  /* margin-top: 0px; */
-  text-decoration: none;
-}
+  .about > a:hover {
+    /* margin-top: 0px; */
+    text-decoration: none;
+  }
 
-.title {
-  min-width: 500px;
-  font-size: 36px;
-  color: white;
-  position: relative;
-  right: 20px;
-  top: 10px;
-}
+  .title {
+    min-width: 500px;
+    font-size: 36px;
+    color: white;
+    position: relative;
+    right: 20px;
+    top: 10px;
+  }
 
-.links {
-  min-width: 500px;
-  display: flex;
-  position: absolute;
-  margin-left: 270px;
-  bottom: -30px;
-  right: 100px;
-}
+  .links {
+    min-width: 500px;
+    display: flex;
+    position: absolute;
+    margin-left: 270px;
+    bottom: -30px;
+    right: 100px;
+  }
 
-.links > a {
-  display: block;
-  margin: 45px;
-  color: white;
-  font-size: 23px;
-  font-weight: bold;
-  text-decoration: none;
-}
-/* 
+  .links > a {
+    display: block;
+    margin: 45px;
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  /* 
 .repo:hover {
   color: black;
   border: 1px solid white;
@@ -66,39 +68,40 @@
   border-radius: 5px;
 } */
 
-.repo {
-  height: 10px;
-  padding-top: 35px;
-  padding-right: 120px;
-}
+  .repo {
+    height: 10px;
+    padding-top: 35px;
+    padding-right: 120px;
+  }
 
-.links > a:hover {
-  /* color: black; */
-  /* border: 1px solid white;
+  .links > a:hover {
+    /* color: black; */
+    /* border: 1px solid white;
   background-color: white; */
-  border-radius: 5px;
-}
+    border-radius: 5px;
+  }
 
-.githublink {
-  width: 100px;
-  height: 100px;
-  padding-bottom: 10px;
-}
+  .githublink {
+    width: 100px;
+    height: 100px;
+    padding-bottom: 10px;
+  }
 
-.linkedinlink {
-  width: 75px;
-  height: 75px;
-  padding-top: 12px;
-}
+  .linkedinlink {
+    width: 75px;
+    height: 75px;
+    padding-top: 12px;
+  }
 
-.angellistlink {
-  width: 75px;
-  height: 75px;
-  padding-top: 10px;
-}
+  .angellistlink {
+    width: 75px;
+    height: 75px;
+    padding-top: 10px;
+  }
 
-.githublink:hover,
-.linkedinlink:hover,
-.angellistlink:hover {
-  background-color: black;
+  .githublink:hover,
+  .linkedinlink:hover,
+  .angellistlink:hover {
+    background-color: black;
+  }
 }

@@ -51,7 +51,8 @@
   border: 5px solid white; */
   position: absolute;
   top: 330px;
-  left: 255px;
+  /* left: 260px; */
+
   font-size: 20px;
   columns: 2 auto;
 }
