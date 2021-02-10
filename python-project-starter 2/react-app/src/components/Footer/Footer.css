@@ -12,7 +12,8 @@
     position: relative;
     overflow: hidden;
     right: 0px;
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-family: "Montserrat", sans-serif;
+    /* font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; */
     /* margin-top: 420px; */
   }
 
@@ -20,7 +21,8 @@
     margin-top: 25px;
     margin-left: -18px;
     font-size: 16px;
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-family: "Montserrat", sans-serif;
+    /* font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; */
     min-width: 500px;
   }
 

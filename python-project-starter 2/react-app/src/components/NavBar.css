@@ -75,7 +75,8 @@
     color: black;
     border-radius: 10px;
     background-color: inherit;
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    /* font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; */
+    font-family: "Montserrat", sans-serif;
     margin: 0;
     width: 55px;
   }
@@ -222,7 +223,7 @@
 
   .unrappdsub {
     font-size: 18px;
-    margin-left: 82px;
+    margin-left: 70px;
     font-weight: bold;
   }
 
@@ -293,7 +294,7 @@
     color: black;
     border-radius: 5px;
     background-color: inherit;
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-family: "", CenturyGothic, AppleGothic, sans-serif;
     margin: 0;
     width: 55px;
   }

@@ -16,7 +16,7 @@ const customStyles = {
     height: "275px",
     width: "300px",
     borderRadius: "5px",
-    fontFamily: "Century Gothic, CenturyGothic, AppleGothic, sansSerif",
+    fontFamily: "Montserrat",
     color: "white",
     backgroundColor: "black",
   },
