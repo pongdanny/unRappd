@@ -19,6 +19,7 @@ const customStyles = {
     fontFamily: "Montserrat",
     color: "white",
     backgroundColor: "black",
+    textAlign: "center",
   },
 };
 

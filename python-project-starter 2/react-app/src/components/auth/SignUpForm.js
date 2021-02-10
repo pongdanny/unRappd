@@ -19,6 +19,7 @@ const customStyles = {
     fontFamily: "Century Gothic, CenturyGothic, AppleGothic, sansSerif",
     backgroundColor: "black",
     color: "white",
+    textAlign: "center",
   },
 };
 
