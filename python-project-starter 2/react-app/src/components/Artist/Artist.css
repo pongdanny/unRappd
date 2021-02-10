@@ -1,7 +1,7 @@
 .artistlist {
   display: flex;
   flex-direction: column;
-  padding-left: 0px;
+  padding-left: 320px;
   align-items: center;
 }
 
@@ -22,7 +22,7 @@
 .artisttext {
   position: absolute;
   top: 175px;
-  left: 585px;
+  left: 800px;
   font-weight: bold;
   color: white;
 }
@@ -30,7 +30,7 @@
 .artistsubtext {
   position: absolute;
   top: 260px;
-  left: 575px;
+  left: 795px;
   font-weight: bold;
   color: white;
   text-decoration: none;
