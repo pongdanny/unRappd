@@ -20,7 +20,7 @@ const Home = () => {
                 We provide a platform for hip hop artists who we feel deserve
                 the spotlight! Rappers come from all walks of life and their
                 voices deserve to be heard, especially the ones who've got real
-                stories to tell. For most of these artists, its much deeper than
+                stories to tell. For most of these individuals, its much deeper than
                 rap..
               </p>
               <p>
