@@ -22,7 +22,7 @@ function Song({ user }) {
       ></img>
       <h1 className="songtext">Available Songs</h1>
       <a href="/newsong" className="songsubtext">
-        Add a New Song To the list!
+        Add a New Song!
       </a>
       <section className="songsection">
         <div className="songlistcontainer">
