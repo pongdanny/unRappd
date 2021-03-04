@@ -22,7 +22,7 @@ function Artist({ user }) {
       ></img>
       <h1 className="artisttext">Available Artists</h1>
       <a href="/newartist" className="artistsubtext">
-        Don't See Your Artist? Add Them Here!
+        Don't See Your Artist? Add Them!
       </a>
       <section>
         <div className="artistlistcontainer">
